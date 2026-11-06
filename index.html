@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!-- Google Analytics / Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-W37LCCG5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>motherlover — divine maternal service | Doula Berlin</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- SEO & Social Sharing Meta Tags -->
+    <meta name="description" content="Lara Süss — Ganzheitliche Geburts- und Postpartum-Doula in Berlin. Liebevolle, kontinuierliche Begleitung für Schwangerschaft, Haus- und Klinikgeburt sowie Wochenbett.">
+    <meta name="keywords" content="Doula Berlin, Geburtsbegleitung, Wochenbettbegleitung, Postpartum Doula, Hausgeburt Berlin, Gebärpool Verleih">
+    <meta property="og:title" content="motherlover — divine maternal service | Lara Süss Doula Berlin">
+    <meta property="og:description" content="Ganzheitliche und liebevolle Begleitung durch Schwangerschaft, Geburt und Wochenbett in Berlin.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.motherloverberlin.de">
+    <meta property="og:image" content="lara.jpg">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Courier+Prime:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBg: '#f2eae1',          /* Sand-Beige Hintergrund */
+                        brandCardBg: '#e5d1c5',      /* Warmes Dusty Rose / Terracotta Light */
+                        brandCardBgDark: '#d8bba9',  
+                        brandTerracotta: '#9e6949',  /* Erdiges Terrakotta */
+                        brandBrown: '#6e4f3a',       /* Mokka Braun */
+                        brandOchre: '#c29b53',       /* Ocker für Buttons */
+                        brandText: '#2e2825',        /* Edles Dunkelbraun für Text */
+                        brandTextMuted: '#6e645a',
+                        brandBorder: '#3a342f',
+                        earthTan: '#c79d67',
+                        earthBlush: '#f0d5c3',
+                        earthLinen: '#e3ddcf',
+                        quoteBg: '#E8C8BE',
+                        quoteBorder: '#332D2B',
+                        quoteText: '#2B2625',
+                        footerBg: '#eea082',        /* Pfirsich-Farbe für den Footer */
+                        footerText: '#2A2825',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        mono: ['"Courier Prime"', 'monospace'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                        logo: ['"Pacifico"', 'cursive', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #f2eae1;
+            color: #2e2825;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .serif-heading {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .mono-text {
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .brand-logo {
+            font-family: 'Pacifico', cursive;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        /* Zweisprachige Umschaltung via html[lang] */
+        html[lang="de"] .lang-en { display: none !important; }
+        html[lang="en"] .lang-de { display: none !important; }
+
+        .photo-frame {
+            background-color: transparent;
+            padding: 0;
+            box-shadow: none;
+            border: none;
+            transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .photo-frame:hover {
+            transform: translateY(-3px);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            min-height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            background-color: #9e6949;
+            color: #f2eae1;
+            padding: 10px 0;
+            white-space: nowrap;
+        }
+
+        .ticker-move {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 55s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .ticker-move {
+                animation: none;
+                white-space: normal;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .page-tab {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .page-tab.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .nav-border-box {
+            border-top: 1px solid rgba(58, 52, 47, 0.25);
+            border-bottom: 1px solid rgba(58, 52, 47, 0.25);
+        }
+
+        .nav-btn {
+            position: relative;
+            padding-bottom: 3px;
+        }
+
+        .nav-btn.active-link {
+            border-bottom: 1.5px solid #2e2825;
+        }
+
+        /* Robuste Dropdown-Mechanik mit Brücke gegen Hover-Abreißen */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100%;
+            background-color: #f2eae1;
+            min-width: 250px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+            border: 1px solid rgba(58, 52, 47, 0.2);
+            z-index: 100;
+            padding: 6px 0;
+            margin-top: 0;
+        }
+
+        /* Unsichtbare Brücke, damit der Cursor beim Übergang im Hover bleibt */
+        .dropdown:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 12px;
+        }
+
+        .dropdown:hover .dropdown-menu,
+        .dropdown:focus-within .dropdown-menu,
+        .dropdown.is-open .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            width: 100%;
+            text-align: left;
+            padding: 12px 18px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: #2e2825;
+            transition: all 0.2s;
+            border-bottom: 1px solid rgba(58, 52, 47, 0.08);
+            display: block;
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #9e6949;
+            color: #ffffff;
+        }
+
+        .btn-editorial {
+            font-family: 'Courier Prime', monospace;
+            background-color: #c29b53;
+            color: #2e2825;
+            border: 1px solid #2e2825;
+            padding: 12px 28px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .btn-editorial:hover {
+            background-color: #9e6949;
+            color: #ffffff;
+        }
+
+        .btn-editorial:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        details summary {
+            list-style: none;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-brandTerracotta selection:text-white">
+
+    <!-- TICKER BAR OBEN -->
+    <div class="ticker-wrap mono-text text-xs uppercase tracking-widest border-b border-brandBorder/20">
+        <div class="ticker-move">
+            <span class="px-3">CARING · FOR · THE · MOTHER · IS · CARING · FOR · THE · BABY ✹ CARING · FOR · THE · MOTHER · IS · CARING · FOR · THE · BABY ✹ CARING · FOR · THE · MOTHER · IS · CARING · FOR · THE · BABY ✹ CARING · FOR · THE · MOTHER · IS · CARING · FOR · THE · BABY ✹ </span>
+            <span class="px-3">CARING · FOR · THE · MOTHER · IS · CARING · FOR · THE · BABY ✹ CARING · FOR · THE · MOTHER · IS · CARING · FOR · THE · BABY ✹ CARING · FOR · THE · MOTHER · IS · CARING · FOR · THE · BABY ✹ CARING · FOR · THE · MOTHER · IS · CARING · FOR · THE · BABY ✹ </span>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="pt-8 pb-0 text-center px-4 relative z-30">
+        <a href="#home" class="inline-block group mb-6">
+            <h1 class="brand-logo text-4xl md:text-5xl lg:text-6xl text-brandText tracking-normal mb-1 transition-transform group-hover:scale-105 duration-300">
+                motherlover
+            </h1>
+            <p class="mono-text text-brandTerracotta text-xs md:text-sm tracking-widest uppercase mt-1 font-semibold">
+                divine maternal service
+            </p>
+        </a>
+
+        <!-- NAVIGATION (DESKTOP) -->
+        <nav id="nav-menu" class="nav-border-box py-3 max-w-5xl mx-auto hidden md:block">
+            <ul class="flex justify-center items-center gap-6 lg:gap-11 mono-text text-xs md:text-sm tracking-widest uppercase text-brandText font-semibold">
+                <li><a href="#home" id="nav-home" class="nav-btn active-link hover:text-brandTerracotta transition-all py-1">HOME</a></li>
+                <li><a href="#lara" id="nav-lara" class="nav-btn hover:text-brandTerracotta transition-all py-1">LARA</a></li>
+                <li><a href="#doula-info" id="nav-doula-info" class="nav-btn hover:text-brandTerracotta transition-all py-1">DOULA</a></li>
+                
+                <li class="dropdown" id="desktop-dropdown">
+                    <a href="#angebot-schwangerschaft" id="nav-angebot" class="nav-btn hover:text-brandTerracotta transition-all py-1 inline-flex items-center gap-1">
+                        <span class="lang-de">ANGEBOT</span>
+                        <span class="lang-en">SERVICES</span>
+                        <svg class="w-3 h-3 fill-current inline" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#angebot-schwangerschaft">
+                            <span class="lang-de">SCHWANGERSCHAFT</span>
+                            <span class="lang-en">PREGNANCY</span>
+                        </a>
+                        <a href="#angebot-geburt">
+                            <span class="lang-de">GEBURT</span>
+                            <span class="lang-en">BIRTH</span>
+                        </a>
+                        <a href="#angebot-postpartum">
+                            <span class="lang-de">POSTPARTUM / WOCHENBETT</span>
+                            <span class="lang-en">POSTPARTUM</span>
+                        </a>
+                        <a href="#angebot-gebaerpool">
+                            <span class="lang-de">GEBÄRPOOL VERLEIH</span>
+                            <span class="lang-en">BIRTH POOL RENTAL</span>
+                        </a>
+                    </div>
+                </li>
+
+                <li><a href="#testimonials" id="nav-testimonials" class="nav-btn hover:text-brandTerracotta transition-all py-1">TESTIMONIALS</a></li>
+                <li>
+                    <a href="#kontakt" id="nav-kontakt" class="nav-btn hover:text-brandTerracotta transition-all py-1">
+                        <span class="lang-de">KONTAKT</span>
+                        <span class="lang-en">CONTACT</span>
+                    </a>
+                </li>
+
+                <!-- SPRACHUMSCHALTER (DESKTOP) -->
+                <li class="pl-2 border-l border-brandBorder/20 flex items-center gap-1.5 text-xs font-mono">
+                    <button type="button" onclick="setLanguage('de')" id="lang-btn-de" class="hover:text-brandTerracotta transition-colors font-bold text-brandText">DE</button>
+                    <span class="opacity-40">/</span>
+                    <button type="button" onclick="setLanguage('en')" id="lang-btn-en" class="hover:text-brandTerracotta transition-colors opacity-60">EN</button>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- MOBILES MENÜ BAR -->
+        <div class="md:hidden nav-border-box py-3 flex justify-between items-center px-4">
+            <div class="flex items-center gap-2">
+                <span class="mono-text text-xs font-bold uppercase tracking-widest text-brandTerracotta">MENÜ</span>
+                <!-- SPRACHUMSCHALTER (MOBILE BAR) -->
+                <div class="mono-text text-xs tracking-wider flex items-center gap-1 border-l border-brandBorder/30 pl-3">
+                    <button type="button" onclick="setLanguage('de')" id="mob-lang-btn-de" class="font-bold text-brandText">DE</button>
+                    <span class="opacity-40">/</span>
+                    <button type="button" onclick="setLanguage('en')" id="mob-lang-btn-en" class="opacity-60 text-brandTextMuted">EN</button>
+                </div>
+            </div>
+            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-2 text-brandText focus:outline-none" aria-label="Menü öffnen" aria-expanded="false">
+                <svg id="burger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- MOBIL DROPDOWN MENÜ -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brandBg border-b border-brandBorder/20 px-6 py-6 space-y-4 text-left mono-text text-xs tracking-widest uppercase">
+            <a href="#home" onclick="closeMobileMenu()" class="block w-full text-left py-2 border-b border-brandBorder/10 font-bold">HOME</a>
+            <a href="#lara" onclick="closeMobileMenu()" class="block w-full text-left py-2 border-b border-brandBorder/10 font-bold">LARA</a>
+            <a href="#doula-info" onclick="closeMobileMenu()" class="block w-full text-left py-2 border-b border-brandBorder/10 font-bold">DOULA</a>
+            
+            <div class="py-2 border-b border-brandBorder/10">
+                <span class="block font-bold text-brandTerracotta mb-2">
+                    <span class="lang-de">ANGEBOT:</span>
+                    <span class="lang-en">SERVICES:</span>
+                </span>
+                <div class="pl-4 space-y-2 text-brandText font-medium">
+                    <a href="#angebot-schwangerschaft" onclick="closeMobileMenu()" class="block py-1">
+                        <span class="lang-de">✹ SCHWANGERSCHAFT</span>
+                        <span class="lang-en">✹ PREGNANCY</span>
+                    </a>
+                    <a href="#angebot-geburt" onclick="closeMobileMenu()" class="block py-1">
+                        <span class="lang-de">✹ GEBURT</span>
+                        <span class="lang-en">✹ BIRTH</span>
+                    </a>
+                    <a href="#angebot-postpartum" onclick="closeMobileMenu()" class="block py-1">
+                        <span class="lang-de">✹ POSTPARTUM / WOCHENBETT</span>
+                        <span class="lang-en">✹ POSTPARTUM</span>
+                    </a>
+                    <a href="#angebot-gebaerpool" onclick="closeMobileMenu()" class="block py-1">
+                        <span class="lang-de">✹ GEBÄRPOOL VERLEIH</span>
+                        <span class="lang-en">✹ BIRTH POOL RENTAL</span>
+                    </a>
+                </div>
+            </div>
+
+            <a href="#testimonials" onclick="closeMobileMenu()" class="block w-full text-left py-2 border-b border-brandBorder/10 font-bold">TESTIMONIALS</a>
+            <a href="#kontakt" onclick="closeMobileMenu()" class="block w-full text-left py-2 font-bold">
+                <span class="lang-de">KONTAKT</span>
+                <span class="lang-en">CONTACT</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow w-full py-6">
+
+        <!-- HOME PAGE TAB -->
+        <div id="tab-home" class="page-tab active space-y-10" aria-hidden="false">
+            <div class="max-w-5xl mx-auto px-4">
+                <section class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-center">
+                    <div class="md:col-span-6">
+                        <div class="photo-frame max-w-md mx-auto">
+                            <img src="lara.jpg" alt="Lara - Motherlover Doula" class="w-full h-[400px] object-cover" width="500" height="400">
+                        </div>
+                    </div>
+                    <div class="md:col-span-6 space-y-4">
+                        <span class="mono-text text-xs tracking-widest text-brandTerracotta uppercase">
+                            <span class="lang-de">ÜBER MICH</span>
+                            <span class="lang-en">ABOUT ME</span>
+                        </span>
+                        <h2 class="serif-heading text-3xl md:text-4xl lg:text-5xl text-brandText font-normal leading-snug">
+                            <span class="lang-de">Deutsch & Englisch sprechende Geburts- und <em class="font-normal italic">Postpartum Doula</em></span>
+                            <span class="lang-en">German & English Speaking Birth and <em class="font-normal italic">Postpartum Doula</em></span>
+                        </h2>
+                        
+                        <div class="space-y-3 text-sm md:text-base text-brandText font-light leading-relaxed">
+                            <p class="font-normal text-base md:text-lg text-brandTerracotta">
+                                <span class="lang-de">Schön, dass du da bist! Ich bin Lara.</span>
+                                <span class="lang-en">Wonderful to have you here! I'm Lara.</span>
+                            </p>
+                            <p class="lang-de">
+                                Präsent, liebevoll und verlässlich. Selbst Mama von 3 Kindern und Doula seit 2020. Mir geht es darum, dass du frei von äußeren Erwartungen auf deinen Körper und dein Gefühl vertrauen darfst – egal wo du gebären möchtest, wie du Schmerzen begegnest oder welche Unterstützung du dir wünschst.
+                            </p>
+                            <p class="lang-en">
+                                Present, loving, and reliable. A mother of three and a practicing doula since 2020. My wish is for you to trust your body and intuition free from external expectations — wherever you choose to give birth, however you meet sensations, and whatever support you desire.
+                            </p>
+                            <p class="lang-de">
+                                Ich begleite dich von Herzen mit Ruhe, Empathie und sanfter Fürsorge. Mein Ziel ist es, dir den Rücken zu stärken und dir einen geschützten Raum für deine Wünsche und Bedürfnisse zu schenken.
+                            </p>
+                            <p class="lang-en">
+                                I accompany you wholeheartedly with calm, empathy, and gentle care. My goal is to hold your back and provide a safe, protected sanctuary for your wishes and needs.
+                            </p>
+                        </div>
+
+                        <div class="pt-2">
+                            <a href="#lara" class="btn-editorial">
+                                <span class="lang-de">ERFAHRE MEHR ÜBER LARA</span>
+                                <span class="lang-en">LEARN MORE ABOUT LARA</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ZITAT VERENA SCHMID -->
+            <section class="w-full pt-4">
+                <div class="bg-quoteBg border-y border-quoteBorder py-12 px-6 md:py-16 md:px-16 text-center space-y-6 w-full shadow-sm">
+                    <div class="max-w-4xl mx-auto space-y-6">
+                        <blockquote class="serif-heading text-2xl md:text-4xl lg:text-5xl text-quoteText font-light leading-[1.6] tracking-wide uppercase">
+                            „IF WOMEN WERE AWARE OF THE IMMENSE FORCE THAT DWELLS IN THEM, THEY WOULD NOT ONLY CHANGE THE BIRTH SCENE, BUT SOCIETY AS A WHOLE.“
+                        </blockquote>
+                        
+                        <div class="flex justify-center pt-1 pb-1">
+                            <svg class="w-24 md:w-32 h-4 text-quoteText/70" viewBox="0 0 120 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 8C12 2 22 14 32 8C42 2 52 14 62 8C72 2 82 14 92 8C102 2 112 14 118 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+
+                        <p class="mono-text text-xs md:text-sm text-quoteText/80 uppercase tracking-widest font-semibold">
+                            — VERENA SCHMID
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DIE 4 ANGEBOTS-ABSCHNITTE -->
+            <section class="w-full pt-4 space-y-0">
+
+                <!-- 1. SCHWANGERSCHAFT -->
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 md:h-[500px]">
+                    <div class="w-full h-[300px] md:h-[500px]">
+                        <img src="schwangerschaft.jpg" alt="Schwangerschaft" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
+                    </div>
+                    <div class="bg-brandBg p-8 md:p-12 lg:p-14 flex flex-col justify-center items-start space-y-4 md:h-[500px]">
+                        <span class="mono-text text-xs text-brandTerracotta uppercase tracking-widest">
+                            <span class="lang-de">GANZHEITLICHE BEGLEITUNG</span>
+                            <span class="lang-en">HOLISTIC SUPPORT</span>
+                        </span>
+                        <h3 class="serif-heading text-3xl md:text-4xl lg:text-5xl text-brandText font-normal leading-tight">
+                            <em class="italic">
+                                <span class="lang-de">Schwangerschaft</span>
+                                <span class="lang-en">Pregnancy</span>
+                            </em>
+                        </h3>
+                        <p class="text-xs md:text-sm lg:text-base text-brandText font-light leading-relaxed max-w-xl">
+                            <span class="lang-de">Hier geht es um mehr als nur Information, zusammen machen wir in Einzel und Paar-Sitzungen Platz für den neuen Lebensabschnitt - körperlich, mental und spirituell. In unseren Treffen biete ich dir und euch immer wieder kleine Auszeiten, in denen ihr reflektieren könnt, was euch die Schwangerschaft gerade zeigt und wo ihr noch Unterstützung braucht.</span>
+                            <span class="lang-en">This is about much more than information. Together, in individual and couples' sessions, we make space for this new chapter of life — physically, mentally, and spiritually. During our meetings, I offer you peaceful pauses to reflect on what your pregnancy is illuminating and where you need caring support.</span>
+                        </p>
+                        <div class="pt-2">
+                            <a href="#angebot-schwangerschaft" class="btn-editorial">
+                                <span class="lang-de">MEHR ERFAHREN</span>
+                                <span class="lang-en">LEARN MORE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. GEBURT -->
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 md:h-[500px]">
+                    <div class="bg-[#ebdcd1] p-8 md:p-12 lg:p-14 flex flex-col justify-center items-start space-y-4 md:h-[500px] md:order-1 order-2">
+                        <span class="mono-text text-xs text-brandTerracotta uppercase tracking-widest">
+                            <span class="lang-de">GANZHEITLICHE BEGLEITUNG</span>
+                            <span class="lang-en">HOLISTIC SUPPORT</span>
+                        </span>
+                        <h3 class="serif-heading text-3xl md:text-4xl lg:text-5xl text-brandText font-normal leading-tight">
+                            <em class="italic">
+                                <span class="lang-de">Geburt</span>
+                                <span class="lang-en">Birth</span>
+                            </em>
+                        </h3>
+                        <p class="text-xs md:text-sm lg:text-base text-brandText font-light leading-relaxed max-w-xl">
+                            <span class="lang-de">Wo und wie auch immer du gebären möchtest – ob im Krankenhaus, außerklinisch oder per (geplantem) Kaiserschnitt – ich begleite dich und deine Familie in ganz Berlin. Mit der Erfahrung aus drei eigenen Geburten und knapp 30 begleiteten Familien schenke ich dir an diesem besonderen Tag klare Präsenz und liebevolle Impulse. Frei von eigenen Agenden stehe ich verlässlich an deiner Seite. Ich bleibe da, wenn im Raum die Stimmung kippt, bleibe ruhig und bei euch, wenn es hektisch wird oder Pläne sich ändern.</span>
+                            <span class="lang-en">Wherever and however you wish to give birth — whether in a hospital, out-of-hospital, or via a (planned) cesarean — I support you and your family throughout Berlin. Drawing on the experience of my own three births and nearly 30 supported families, I bring calm presence and loving guidance to this momentous day. With zero personal agenda, I stand steadfastly by your side. I remain grounded when the room's energy shifts, staying steady and present with you when things get hectic or plans change.</span>
+                        </p>
+                        <div class="pt-2">
+                            <a href="#angebot-geburt" class="btn-editorial">
+                                <span class="lang-de">MEHR ERFAHREN</span>
+                                <span class="lang-en">LEARN MORE</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full h-[300px] md:h-[500px] md:order-2 order-1">
+                        <img src="homegeburt.jpg" alt="Geburt / Hausgeburt" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
+                    </div>
+                </div>
+
+                <!-- 3. POSTPARTUM -->
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 md:h-[500px]">
+                    <div class="w-full h-[300px] md:h-[500px]">
+                        <img src="homepostpartum.jpg" alt="Postpartum" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
+                    </div>
+                    <div class="bg-brandBg p-8 md:p-12 lg:p-14 flex flex-col justify-center items-start space-y-4 md:h-[500px]">
+                        <span class="mono-text text-xs text-brandTerracotta uppercase tracking-widest">
+                            <span class="lang-de">GANZHEITLICHE BEGLEITUNG</span>
+                            <span class="lang-en">HOLISTIC SUPPORT</span>
+                        </span>
+                        <h3 class="serif-heading text-3xl md:text-4xl lg:text-5xl text-brandText font-normal leading-tight">
+                            <em class="italic">Postpartum</em>
+                        </h3>
+                        <p class="text-xs md:text-sm lg:text-base text-brandText font-light leading-relaxed max-w-xl">
+                            <span class="lang-de">Im Wochenbett bin ich je nach Bedarf für die ganze Familie oder auch speziell für die neugeborene Mama da. Mein Angebot variiert vom Kochen nährender Mahlzeiten, das Halten deines Babys zu wohltuenden Kräuter Bädern und Massagen für dich.</span>
+                            <span class="lang-en">In the postpartum period, I am there for your whole family or specifically dedicated to the newly born mother. My support ranges from cooking nourishing, warm meals and holding your baby to soothing herbal baths and restorative massages for you.</span>
+                        </p>
+                        <div class="pt-2">
+                            <a href="#angebot-postpartum" class="btn-editorial">
+                                <span class="lang-de">MEHR ERFAHREN</span>
+                                <span class="lang-en">LEARN MORE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. GEBÄRPOOL -->
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 md:h-[500px]">
+                    <div class="bg-[#ebdcd1] p-8 md:p-12 lg:p-14 flex flex-col justify-center items-start space-y-4 md:h-[500px] md:order-1 order-2">
+                        <span class="mono-text text-xs text-brandTerracotta uppercase tracking-widest">
+                            <span class="lang-de">WASSERGEBURT</span>
+                            <span class="lang-en">WATER BIRTH</span>
+                        </span>
+                        <h3 class="serif-heading text-3xl md:text-4xl lg:text-5xl text-brandText font-normal leading-tight">
+                            <em class="italic">
+                                <span class="lang-de">Gebärpool</span>
+                                <span class="lang-en">Birth Pool</span>
+                            </em>
+                        </h3>
+                        <p class="text-xs md:text-sm lg:text-base text-brandText font-light leading-relaxed max-w-xl">
+                            <span class="lang-de">Miete ein professionelles Gebärpool-Set für deine Hausgeburt. Das warme Wasser spendet natürliche Schmerzlinderung, Entspannung und Geborgenheit bei dir zu Hause.</span>
+                            <span class="lang-en">Rent a professional birth pool set for your home birth. Warm water offers natural pain relief, deep relaxation, and comfort in the intimacy of your home.</span>
+                        </p>
+                        <div class="pt-2">
+                            <a href="#angebot-gebaerpool" class="btn-editorial">
+                                <span class="lang-de">MEHR ERFAHREN</span>
+                                <span class="lang-en">LEARN MORE</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full h-[300px] md:h-[500px] md:order-2 order-1">
+                        <img src="gebaerpool.jpg" alt="Gebärpool" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <!-- DOULA SUBPAGE -->
+        <div id="tab-doula-info" class="page-tab space-y-0 w-full" aria-hidden="true">
+            
+            <div class="max-w-5xl mx-auto px-4 text-center space-y-2 pb-10 pt-4">
+                <span class="mono-text text-xs text-brandTerracotta uppercase tracking-widest">
+                    <span class="lang-de">DIE ROLLE EINER DOULA</span>
+                    <span class="lang-en">THE ROLE OF A DOULA</span>
+                </span>
+                <h2 class="serif-heading text-4xl md:text-6xl text-brandText font-normal">
+                    <span class="lang-de">Was macht eine <em class="italic">Geburtsdoula</em>?</span>
+                    <span class="lang-en">What Does a <em class="italic">Birth Doula</em> Do?</span>
+                </h2>
+            </div>
+
+            <!-- 1. SCHWELLENÜBERGÄNGE IM LEBEN -->
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 md:h-[500px]">
+                <div class="bg-[#ebdcd1] p-8 md:p-12 lg:p-16 flex flex-col justify-center items-start space-y-4 md:h-[500px] md:order-1 order-2">
+                    <span class="mono-text text-xs text-brandTerracotta uppercase tracking-widest">TRANSFORMATION</span>
+                    <h3 class="serif-heading text-3xl md:text-4xl lg:text-5xl text-brandText font-normal leading-tight">
+                        <span class="lang-de">Schwellenübergänge im <em class="italic">Leben</em></span>
+                        <span class="lang-en">Life's Rites of <em class="italic">Passage</em></span>
+                    </h3>
+                    <p class="text-xs md:text-sm lg:text-base text-brandText leading-relaxed font-light max-w-xl">
+                        <span class="lang-de">Doulas sind wie eine professionelle Freundin bei dem Schwellenübergang Geburt. Die Reise ins Elternsein ist eines der oder vielleicht sogar DAS bedeutendste Ereignis in dem Leben von zwei Menschen, was uns nachhaltig verändert.</span>
+                        <span class="lang-en">Doulas are like a professional friend through the threshold of birth. The journey into parenthood is one of the — perhaps THE — most profound events in the lives of two people, reshaping us permanently.</span>
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base text-brandText leading-relaxed font-light max-w-xl">
+                        <span class="lang-de">Professionelle emotionale Begleitung ist dabei häufig elementar, um die Erfahrungen zu machen, die wir uns in dieser transformierenden Zeit wünschen. Vor allem weil wir den Zugang zu dem natürlichen Prozess verloren haben und durch Medien von Angst geprägt sind.</span>
+                        <span class="lang-en">Professional emotional accompaniment is often fundamental to creating the experiences we long for during this transformative time. Especially because our society has largely lost connection to the natural process and is heavily conditioned by fear in the media.</span>
+                    </p>
+                </div>
+                <div class="w-full h-[320px] md:h-[500px] md:order-2 order-1">
+                    <img src="angebotgeburt.jpg" alt="Schwellenübergänge" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
+                </div>
+            </div>
+
+            <!-- 2. PARTNER/IN UNTERSTÜTZUNG -->
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 md:h-[500px]">
+                <div class="w-full h-[320px] md:h-[500px]">
+                    <img src="Vaeterstaerken.jpg" alt="Väter & Partner/in stärken" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
+                </div>
+                <div class="bg-brandBg p-8 md:p-12 lg:p-16 flex flex-col justify-center items-start space-y-4 md:h-[500px]">
+                    <span class="mono-text text-xs text-brandTerracotta uppercase tracking-widest">
+                        <span class="lang-de">PARTNER/IN UNTERSTÜTZUNG</span>
+                        <span class="lang-en">PARTNER SUPPORT</span>
+                    </span>
+                    <h3 class="serif-heading text-3xl md:text-4xl lg:text-5xl text-brandText font-normal leading-tight">
+                        <span class="lang-de">Gemeinsam ein <em class="italic">starkes Team</em></span>
+                        <span class="lang-en">A Strong Team <em class="italic">Together</em></span>
+                    </h3>
+                    <p class="text-xs md:text-sm lg:text-base text-brandText leading-relaxed font-light max-w-xl">
+                        <span class="lang-de">Doulas arbeiten Hand in Hand mit deiner Begleitperson und bilden gemeinsam mit deinem Lieblingsmenschen ein starkes Team. Da eine Geburt auch für deine/n Partner/in eine intensive Erfahrung ist, schaffen wir Orientierung und Entlastung.</span>
+                        <span class="lang-en">Doulas work hand in hand with your birth partner, creating a resilient, united team with your favorite person. Because birth is deeply intense for your partner too, we bring orientation and grounded relief.</span>
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base text-brandText leading-relaxed font-light max-w-xl">
+                        <span class="lang-de">Wir helfen dabei, Unsicherheiten gegenüber medizinischen Abläufen abzubauen und schenken Raum für notwendige Pausen. So kann sich dein/e Partner/in genau im eigenen Wohlfühlbereich einbringen und voll und ganz die Unterstützung sein, die du dir wünschst.</span>
+                        <span class="lang-en">We help ease anxieties around medical procedures and hold space for necessary breathers and rest. This allows your partner to show up fully in their own zone of comfort and be the loving anchor you truly need.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3. GANZHEITLICHE FÜRSORGE -->
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 md:h-[500px]">
+                <div class="bg-[#ebdcd1] p-8 md:p-12 lg:p-16 flex flex-col justify-center items-start space-y-4 md:h-[500px] md:order-1 order-2">
+                    <span class="mono-text text-xs text-brandTerracotta uppercase tracking-widest">
+                        <span class="lang-de">GANZHEITLICHE FÜRSORGE</span>
+                        <span class="lang-en">HOLISTIC CARE</span>
+                    </span>
+                    <h3 class="serif-heading text-3xl md:text-4xl lg:text-5xl text-brandText font-normal leading-tight">
+                        <span class="lang-de">Wächterin der <em class="italic">Intimität</em></span>
+                        <span class="lang-en">Guardian of <em class="italic">Intimacy</em></span>
+                    </h3>
+                    <p class="text-xs md:text-sm lg:text-base text-brandText leading-relaxed font-light max-w-xl">
+                        <span class="lang-de">Als Doula sehe ich mich als Wächterin der Intimität. Ich bin keinesfalls dafür zuständig medizinische Probleme zu erkennen, dies ist Aufgabe der Ärzte. Ich bin auch nicht zuständig körperliche Gegebenheiten zu überwachen, das liegt im Aufgabenbereich der Hebammen.</span>
+                        <span class="lang-en">As a doula, I view myself as a guardian of intimacy. I am in no way responsible for diagnosing medical issues — that is the role of physicians. Nor am I responsible for monitoring clinical physiological conditions — that belongs to the midwives.</span>
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base text-brandText leading-relaxed font-light max-w-xl">
+                        <span class="lang-de">Ich bin vielmehr dafür da die Frau und ihre Familie emotional und vielleicht auch spirituell zu begleiten, zu sehen und ihren individuellen Raum zu halten. Je nach ihrem Wesen und ihrem einzigartigen Weg passt sich meine Begleitung immer wieder an die neuen Bedürfnisse an. Nicht beurteilend, sondern in Mitgefühl, Dankbarkeit und dem Vertrauen in ihren eigenen Prozess.</span>
+                        <span class="lang-en">Rather, I am here to accompany the mother and her family emotionally and spiritually, seeing them deeply and holding their unique sacred space. Attuned to their essence and distinct journey, my support continually adapts to evolving needs. Never judgmental, but grounded in compassion, gratitude, and steadfast trust in your innate process.</span>
+                    </p>
+                </div>
+                <div class="w-full h-[320px] md:h-[500px] md:order-2 order-1">
+                    <img src="geburt.jpg" alt="Wächterin der Intimität" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
+                </div>
+            </div>
+
+            <!-- 4. VORTEILE EINER DOULA-BEGLEITUNG -->
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 md:h-[500px]">
+                <div class="w-full h-[320px] md:h-[500px]">
+                    <img src="homegeburt.jpg" alt="Vorteile einer Doula-Begleitung" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
+                </div>
+                <div class="bg-brandBg p-8 md:p-12 lg:p-16 flex flex-col justify-center items-start space-y-5 md:h-[500px]">
+                    <div>
+                        <span class="mono-text text-xs text-brandTerracotta uppercase tracking-widest">
+                            <span class="lang-de">STUDIEN & EVIDENZ</span>
+                            <span class="lang-en">STUDIES & EVIDENCE</span>
+                        </span>
+                        <h3 class="serif-heading text-3xl md:text-4xl lg:text-5xl text-brandText font-normal leading-tight mt-1">
+                            <span class="lang-de">Vorteile einer <em class="italic">Doula-Begleitung</em></span>
+                            <span class="lang-en">Evidence-Based Benefits of <em class="italic">Doula Care</em></span>
+                        </h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full max-w-xl pt-2">
+                        <div class="bg-white/80 p-3 md:p-4 border border-brandBorder/10 text-center">
+                            <span class="serif-heading text-2xl md:text-3xl text-brandTerracotta block">-25%</span>
+                            <span class="mono-text text-[10px] md:text-xs text-brandText uppercase tracking-wider">
+                                <span class="lang-de">Dauer der Wehen</span>
+                                <span class="lang-en">Labor Duration</span>
+                            </span>
+                        </div>
+                        <div class="bg-white/80 p-3 md:p-4 border border-brandBorder/10 text-center">
+                            <span class="serif-heading text-2xl md:text-3xl text-brandTerracotta block">-50%</span>
+                            <span class="mono-text text-[10px] md:text-xs text-brandText uppercase tracking-wider">
+                                <span class="lang-de">Kaiserschnitte</span>
+                                <span class="lang-en">Cesarean Births</span>
+                            </span>
+                        </div>
+                        <div class="bg-white/80 p-3 md:p-4 border border-brandBorder/10 text-center">
+                            <span class="serif-heading text-2xl md:text-3xl text-brandTerracotta block">-40%</span>
+                            <span class="mono-text text-[10px] md:text-xs text-brandText uppercase tracking-wider">
+                                <span class="lang-de">Oxytocin-Bedarf</span>
+                                <span class="lang-en">Synthetic Oxytocin</span>
+                            </span>
+                        </div>
+                        <div class="bg-white/80 p-3 md:p-4 border border-brandBorder/10 text-center">
+                            <span class="serif-heading text-2xl md:text-3xl text-brandTerracotta block">-30%</span>
+                            <span class="mono-text text-[10px] md:text-xs text-brandText uppercase tracking-wider">
+                                <span class="lang-de">Schmerzmittel</span>
+                                <span class="lang-en">Pain Medication</span>
+                            </span>
+                        </div>
+                        <div class="bg-white/80 p-3 md:p-4 border border-brandBorder/10 text-center">
+                            <span class="serif-heading text-2xl md:text-3xl text-brandTerracotta block">-40%</span>
+                            <span class="mono-text text-[10px] md:text-xs text-brandText uppercase tracking-wider">
+                                <span class="lang-de">Saugglocken</span>
+                                <span class="lang-en">Vacuum Extractions</span>
+                            </span>
+                        </div>
+                        <div class="bg-white/80 p-3 md:p-4 border border-brandBorder/10 text-center">
+                            <span class="serif-heading text-2xl md:text-3xl text-brandTerracotta block">-60%</span>
+                            <span class="mono-text text-[10px] md:text-xs text-brandText uppercase tracking-wider">
+                                <span class="lang-de">PDA Bedarf</span>
+                                <span class="lang-en">Epidural Requests</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. FAQ ABSCHNITT -->
+            <div class="w-full bg-[#ebdcd1] py-16 px-6 md:px-12 border-t border-brandBorder/15">
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <div class="text-center space-y-2">
+                        <span class="mono-text text-xs text-brandTerracotta uppercase tracking-widest">
+                            <span class="lang-de">HÄUFIGE FRAGEN</span>
+                            <span class="lang-en">FREQUENTLY ASKED QUESTIONS</span>
+                        </span>
+                        <h3 class="serif-heading text-3xl md:text-5xl text-brandText font-normal">
+                            <span class="lang-de">FAQ zur <em class="italic">Doula-Begleitung</em></span>
+                            <span class="lang-en">Doula Care <em class="italic">FAQ</em></span>
+                        </h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <details class="group bg-brandBg/90 border border-brandBorder/15 p-6 open:shadow-sm transition-all duration-200">
+                            <summary class="flex justify-between items-center cursor-pointer font-medium text-brandText text-base md:text-lg serif-heading tracking-wide">
+                                <span class="lang-de">Was ist der Unterschied zwischen einer Hebamme und einer Doula?</span>
+                                <span class="lang-en">What is the difference between a midwife and a doula?</span>
+                                <span class="text-brandTerracotta transition-transform group-open:rotate-45 text-2xl font-light leading-none">+</span>
+                            </summary>
+                            <p class="mt-4 text-xs md:text-sm text-brandText font-light leading-relaxed border-t border-brandBorder/10 pt-4">
+                                <span class="lang-de">Eine Doula ersetzt keine Hebamme, da sie keine medizinischen Aufgaben übernimmt. Stattdessen ist sie eine zusätzliche, kontinuierliche und zugewandte Begleiterin vor, während und nach der Geburt. Sie kümmert sich um das emotionale und seelische Wohlergehen der Gebärenden, stärkt sie in ihrer Selbstbestimmung und schenkt ihr Vertrauen und Zuversicht. Der wohl wichtigste Aspekt einer Doula-Begleitung ist ihre Präsenz: Sie bleibt an deiner Seite und ist die feste Konstante.</span>
+                                <span class="lang-en">A doula never replaces a midwife, as she performs no clinical or medical tasks. Instead, she is an additional, continuous, and devoted companion before, during, and after birth. She tends to the emotional and soulful well-being of the birthing mother, empowers her self-determination, and instills deep trust and calm confidence. The most vital aspect of doula care is presence: she remains continuously by your side as an unwavering constant.</span>
+                            </p>
+                        </details>
+
+                        <details class="group bg-brandBg/90 border border-brandBorder/15 p-6 open:shadow-sm transition-all duration-200">
+                            <summary class="flex justify-between items-center cursor-pointer font-medium text-brandText text-base md:text-lg serif-heading tracking-wide">
+                                <span class="lang-de">Was ist, wenn du bei der Geburt krank bist?</span>
+                                <span class="lang-en">What happens if you are unwell when labor begins?</span>
+                                <span class="text-brandTerracotta transition-transform group-open:rotate-45 text-2xl font-light leading-none">+</span>
+                            </summary>
+                            <p class="mt-4 text-xs md:text-sm text-brandText font-light leading-relaxed border-t border-brandBorder/10 pt-4">
+                                <span class="lang-de">Wenn ich mich für eine Geburtsbegleitung committe, ist es stets mein oberstes Ziel, auch persönlich dabei zu sein. Ich achte gut auf mich und tue alles in meiner Macht Stehende, um gesund zu bleiben. Sollte ich jedoch aufgrund von Krankheit oder anderer unvorhersehbarer Umstände verhindert sein, bin ich berechtigt, eine qualifizierte Vertretungsdoula an meine Stelle einzusetzen.</span>
+                                <span class="lang-en">When I commit to a birth, my highest priority is always to be there in person. I take great care of my health and do everything in my power to remain well. However, should unexpected illness or unforeseen emergencies arise, I have a trusted, qualified backup doula ready to step in seamlessly on my behalf.</span>
+                            </p>
+                        </details>
+
+                        <details class="group bg-brandBg/90 border border-brandBorder/15 p-6 open:shadow-sm transition-all duration-200">
+                            <summary class="flex justify-between items-center cursor-pointer font-medium text-brandText text-base md:text-lg serif-heading tracking-wide">
+                                <span class="lang-de">Wer ist die Vertretungsdoula?</span>
+                                <span class="lang-en">Who is the backup doula?</span>
+                                <span class="text-brandTerracotta transition-transform group-open:rotate-45 text-2xl font-light leading-none">+</span>
+                            </summary>
+                            <p class="mt-4 text-xs md:text-sm text-brandText font-light leading-relaxed border-t border-brandBorder/10 pt-4">
+                                <span class="lang-de">Es gibt in Berlin viele wunderbare Doulas. Wir suchen gemeinsam eine passende Vertretung aus, sodass eure Wünsche zu 100 Prozent berücksichtigt werden.</span>
+                                <span class="lang-en">Berlin is blessed with wonderful, skilled doulas. Together, we choose a compatible backup doula in advance so that your unique preferences and wishes are 100% honored.</span>
+                            </p>
+                        </details>
+
+                        <details class="group bg-brandBg/90 border border-brandBorder/15 p-6 open:shadow-sm transition-all duration-200">
+                            <summary class="flex justify-between items-center cursor-pointer font-medium text-brandText text-base md:text-lg serif-heading tracking-wide">
+                                <span class="lang-de">Kann das Honorar von der Krankenkasse übernommen werden?</span>
+                                <span class="lang-en">Can doula fees be reimbursed by health insurance?</span>
+                                <span class="text-brandTerracotta transition-transform group-open:rotate-45 text-2xl font-light leading-none">+</span>
+                            </summary>
+                            <p class="mt-4 text-xs md:text-sm text-brandText font-light leading-relaxed border-t border-brandBorder/10 pt-4">
+                                <span class="lang-de">Einige gesetzliche und private Krankenkassen bezuschussen die Rufbereitschaft (oft mit rund 250 Euro). Ich helfe dir gerne dabei, das für dich herauszufinden.</span>
+                                <span class="lang-en">Several statutory and private German health insurance providers offer partial reimbursement for on-call fees (often around €250). I am happy to help you navigate and inquire with your provider.</span>
+                            </p>
+                        </details>
+
+                        <details class="group bg-brandBg/90 border border-brandBorder/15 p-6 open:shadow-sm transition-all duration-200">
+                            <summary class="flex justify-between items-center cursor-pointer font-medium text-brandText text-base md:text-lg serif-heading tracking-wide">
+                                <span class="lang-de">Was ist, wenn die Geburt sehr lange dauert?</span>
+                                <span class="lang-en">What if labor takes a very long time?</span>
+                                <span class="text-brandTerracotta transition-transform group-open:rotate-45 text-2xl font-light leading-none">+</span>
+                            </summary>
+                            <p class="mt-4 text-xs md:text-sm text-brandText font-light leading-relaxed border-t border-brandBorder/10 pt-4">
+                                <span class="lang-de">Eine Geburt kann sich über mehrere Tage hinziehen – das ist Teil meines Berufs. Ich bleibe so lange an eurer Seite, bis die Plazenta da ist und ihr gut für das Wochenbett angekommen seid. Sollte ich nach über 24 Stunden im Einsatz an meine Grenzen stoßen, besprechen wir gemeinsam, ob ich mich kurz ausruhe oder ob wir die Vertretung hinzuziehen.</span>
+                                <span class="lang-en">Labor can unfold over many hours or even days — that is an honored part of my calling. I stay by your side until the placenta is birthed and you are softly settled into the postpartum space. If I reach physical limits after more than 24 continuous hours, we discuss together whether I take a brief rest or invite our backup doula to seamlessly step in.</span>
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LARA SUBPAGE -->
+        <div id="tab-lara" class="page-tab space-y-12 max-w-5xl mx-auto px-4" aria-hidden="true">
+            <div class="text-center space-y-2 border-b border-brandBorder/10 pb-6 pt-4">
+                <span class="mono-text text-xs text-brandTerracotta uppercase">
+                    <span class="lang-de">MEINE GESCHICHTE</span>
+                    <span class="lang-en">MY STORY</span>
+                </span>
+                <h2 class="serif-heading text-3xl md:text-5xl text-brandText font-normal">
+                    <span class="lang-de">Hi, ich bin <em class="italic">Lara</em></span>
+                    <span class="lang-en">Hi, I'm <em class="italic">Lara</em></span>
+                </h2>
+            </div>
+
+            <div class="max-w-2xl mx-auto">
+                <div class="photo-frame shadow-md">
+                    <img src="larapage.jpg" alt="Lara Süss Doula" class="w-full max-h-[550px] object-cover" width="600" height="550">
+                </div>
+            </div>
+
+            <section class="max-w-3xl mx-auto space-y-6 text-sm md:text-base text-brandText leading-relaxed font-light">
+                <p class="font-normal text-lg text-brandTerracotta text-center md:text-left">
+                    <span class="lang-de">Und das Gesicht hinter Motherlover.</span>
+                    <span class="lang-en">And the heart behind Motherlover.</span>
+                </p>
+                <p class="lang-de">
+                    Meine Reise ins Doulasein begann 2017 mit der Geburt meiner ersten Tochter. Zu dieser Zeit brachte ich auch ein fehlendes Stück von mir selbst zur Welt: das Muttersein. Schon immer haben mich schwangere Bäuche sowie die Themen Geburt und Muttersein fasziniert. Seit meiner eigenen Schwangerschaft empfinde ich reine Bewunderung für alles, was damit zu tun hat, Mutter zu werden und zu sein.
+                </p>
+                <p class="lang-en">
+                    My journey into doula work began in 2017 with the birth of my first daughter. At that time, I also gave birth to a missing piece of myself: motherhood. Pregnant bellies, birth, and maternal essence have always fascinated me. Since my own first pregnancy, I have felt pure awe and reverence for everything involved in becoming and being a mother.
+                </p>
+                <p class="lang-de">
+                    Durch meine persönlichen Erfahrungen bin ich tiefer in verschiedene Facetten des Mutterseins eingetaucht. Ich habe gemerkt, wie wichtig es ist, nicht nur während der Schwangerschaft, sondern auch danach als Mutter genährt zu werden. Mütter halten das Nervensystem der ganzen Familie sowie die Last des Klischees „Mutter“. Wir sind der Fels der Familie, die Basis für die nächste Generation und brauchen daher Unterstützung, damit wir uns in dieser Rolle entfalten können und ein gesundes Vorbild für unsere Kinder sind. Väter sind natürlich genauso wichtig, aber ich konzentriere mich in meiner Arbeit, wie mein Name es schon sagt, vorrangig auf das Thema Mutterschaft.
+                </p>
+                <p class="lang-en">
+                    Through my personal experiences, I dove deeper into the many facets of motherhood. I realized how vital it is to be continuously nourished as a mother — not only during pregnancy, but long after. Mothers hold the nervous system of the entire family as well as the heavy weight of society's "mother" archetype. We are the family's bedrock, the foundation for the next generation, and we need genuine support to blossom in this role and be a healthy role model for our children. Fathers are of course equally essential, but in my work — as my name implies — I dedicate my heart primarily to mothers and motherhood.
+                </p>
+                
+                <blockquote class="serif-heading text-2xl md:text-3xl text-brandTerracotta italic my-6 pl-6 border-l-2 border-brandTerracotta">
+                    „It takes a village to raise a child! And a mother.“
+                </blockquote>
+
+                <p class="lang-de">
+                    ..sagt ein englisches Sprichwort. Und die Wahrheit dahinter spüre ich immer wieder. In unserer Gesellschaft hingegen stoße ich häufig auf einen Mangel an Verständnis und Mitgefühl für diese immense Aufgabe, die Mütter zu erfüllen haben – nicht nur die der Geburt, sondern auch das Finden in der neuen Rolle. Vielmehr wird von Müttern erwartet, dass sie ihr Leben trotz Kind einfach so weiterführen wie vorher. Das ist ein enormer Performance Druck, den ich selbst oft spürte und der im Endeffekt für niemanden gesund ist. Mutter zu werden ist ein Schwellenübergang. Und mit Schwellen Übergängen kommt auch immer das Verabschieden des alten Lebens und das Begrüßen von neuen Seiten. Dafür gibt es auch den Begriff <strong>Muttertät</strong> oder im englischen “Matrescence”.
+                </p>
+                <p class="lang-en">
+                    ...says the proverb. And I feel the profound truth behind it every day. In modern society, however, I frequently encounter a lack of understanding and compassion for the immense rites of passage mothers undergo — not just childbirth, but finding themselves anew. Instead, mothers are applauded when they simply continue living as before. Striving to remain unchanged creates an enormous performance pressure that I felt deeply myself, and which serves no one's well-being. Becoming a mother is a profound threshold. And with life thresholds always comes letting go of the old self and embracing newly emerging depths. In developmental psychology, this is known as "Matrescence" (in German: Muttertät).
+                </p>
+
+                <!-- ZITAT VON KIMBERLY ANN JOHNSON -->
+                <blockquote class="serif-heading text-xl md:text-2xl text-brandTerracotta italic my-6 pl-6 border-l-2 border-brandTerracotta leading-relaxed">
+                    „When we become a home for another being, we leave behind our individual, autonomous self and maidenhood. We leave behind membership in the world of nonparents. When we become pregnant, who we were starts to fall away, giving way to something new.“<br>
+                    <span class="text-xs uppercase tracking-widest font-sans not-italic text-brandBrown block mt-2">— Kimberly Ann Johnson</span>
+                </blockquote>
+
+                <p class="lang-de">
+                    So entstand langsam und organisch dieser Raum namens <strong>„Motherlover“</strong>. Hier möchte ich, dass sich (werdende) Mütter wohlfühlen – mit all den Gefühlen, die dieser Lebensabschnitt in unserer Gesellschaft mit sich bringt. Ich möchte, dass sich Mütter in ihrem individuellen Wesen und ihren Bedürfnissen gesehen fühlen, und sie daran erinnern, dass sie sich um sich selbst kümmern dürfen. Ganz nach dem Motto: <em>„Put your own life jacket on first!“</em>
+                </p>
+                <p class="lang-en">
+                    Out of this reverence, the sanctuary called <strong>"Motherlover"</strong> grew slowly and organically. Here, I want mothers to feel completely safe and held — with all the complex emotions this chapter brings in our culture. I want mothers to feel truly seen in their unique essence and needs, and reminded that they are worthy of receiving care. True to the timeless truth: <em>"Put your own oxygen mask on first!"</em>
+                </p>
+                <p class="lang-de">
+                    Doch jede Mutter weiß, dass sie immer zuerst an ihre Kinder denkt und wir häufig eine dritte Person brauchen, die uns an diese Notwendigkeit erinnert. Auch meine Lehrerin Gurmukh Kaur Khalsa sagte in meiner „Khalsa Way“-Yogalehrerausbildung: <em>„You need to be full, to be able to give.“</em> Daran erinnere ich seitdem in meinen Pränatal-Yogaklassen, die zuerst in kleinen Gruppen und später bei Jivamukti Berlin stattfanden. Aus schlichten Yogaklassen wurden Frauenkreise für werdende Mütter in holistischen Geburtsvorbereitungskursen namens „Growing into Motherhood“, die zweimal jährlich stattfanden und bei den letzten Treffen auch die Partner/innen mit einbezogen haben.
+                </p>
+                <p class="lang-en">
+                    Yet every mother knows she instinctively puts her children first, and we often need a third person to gently remind us of this necessity. As my teacher Gurmukh Kaur Khalsa shared during my "Khalsa Way" prenatal yoga training: <em>"You need to be full, to be able to give."</em> I have carried this wisdom into my prenatal yoga classes, which began in intimate circles and later at Jivamukti Berlin. These classes evolved into women's circles for expectant mothers in holistic birth preparation workshops named "Growing into Motherhood", held twice a year, welcoming partners in the final session.
+                </p>
+                <p class="lang-de">
+                    Im Frühjahr 2019 begann ich, Frauenkreise und Workshops von Julia Wunderlich, Gründerin von Rolling Tiger, zu assistieren. Diese Erfahrung bereicherte meine Arbeit mit Müttern um eine wertvolle Komponente der Schwesternschaft, des ganzheitlichen Wohlbefindens und des ayurvedischen Wissens. Ende 2019 habe ich an der Ausbildung „Ayurveda für Frauen“ von Julia Wunderlich teilgenommen, um mein Wissen über Ayurveda zu vertiefen.
+                </p>
+                <p class="lang-en">
+                    In spring 2019, I began assisting women's circles and workshops hosted by Julia Wunderlich, founder of Rolling Tiger. This enriched my work with mothers through the sacred dimensions of sisterhood, holistic wellness, and Ayurvedic wisdom. In late 2019, I completed the "Ayurveda for Women" training with Julia Wunderlich to deepen my Ayurvedic knowledge.
+                </p>
+                <p class="lang-de">
+                    Ende 2020 schloss ich meine Doula-Ausbildung bei „Doulas in Deutschland e.V.“ ab. Und fing an, die ersten Paare von der Schwangerschaft bis ins Wochenbett zu betreuen.
+                </p>
+                <p class="lang-en">
+                    In late 2020, I completed my certified doula training with "Doulas in Deutschland e.V." and began supporting my first families from pregnancy through the postpartum weeks.
+                </p>
+
+                <div class="my-8 max-w-xl mx-auto">
+                    <div class="photo-frame shadow-md">
+                        <img src="laratree.jpg" alt="Lara mit Familie am Baum - Motherlover" class="w-full max-h-[580px] object-cover" loading="lazy" width="600" height="580">
+                    </div>
+                </div>
+
+                <p class="lang-de">
+                    Im Frühjahr 2021 wurde meine zweite Tochter auf friedliche Weise bei uns zu Hause geboren, was mir ein weiteres tiefes Verständnis von Geburt und der damit verbundenen Transformation ins erneute Muttersein vermittelte. Außerdem durfte ich selbst erleben, wie wertvoll die Unterstützung einer dritten Person sein kann: Unsere Doula hat auf diesem Weg wunderbar mit uns zusammengearbeitet und mir geholfen, genau die Erfahrung zu machen, die ich mir gewünscht hatte.
+                </p>
+                <p class="lang-en">
+                    In spring 2021, my second daughter was born peacefully at home, gifting me another deep layer of understanding around birth and the transformation of entering motherhood once again. I also experienced firsthand how priceless third-party support is: our doula worked in harmony with us, guiding me to have the exact empowered experience I had envisioned.
+                </p>
+                <p class="lang-de">
+                    Nach meiner Elternzeit begann ich Anfang 2022 wieder mit der Begleitung von Schwangeren und begleitete mehrere Haus- und Krankenhausgeburten. Im Herbst 2022 nutzte ich die Gelegenheit, meine bisherigen Erfahrungen mit der Weisheit südamerikanischer Hebammen zu erweitern, als ich am Training „Indigene Pflege während Schwangerschaft und Geburt“ bei Mujeres Bachué teilnahm.
+                </p>
+                <p class="lang-en">
+                    Following my maternity leave in early 2022, I returned to prenatal and birth support, accompanying multiple home and hospital births. In autumn 2022, I expanded my understanding with the ancient wisdom of South American midwives through the training "Indigenous Care During Pregnancy and Birth" with Mujeres Bachué.
+                </p>
+                <p class="lang-de">
+                    Im Juni 2024 nahm ich am Workshop „Shamanic Dimensions of Pregnancy“ von Jane Hardwicke Collings teil, und im Juli 2024 wurde mein drittes Kind zu Hause geboren.
+                </p>
+                <p class="lang-en">
+                    In June 2024, I participated in the workshop "Shamanic Dimensions of Pregnancy" by Jane Hardwicke Collings, and in July 2024, my third child was born at home.
+                </p>
+                <p class="font-semibold text-brandTerracotta pt-2">
+                    <span class="lang-de">Seit Sommer 2026 arbeite ich wieder als Doula. Inzwischen habe ich ca. 30 Geburten begleitet und mit über 60 Familien zusammengearbeitet.</span>
+                    <span class="lang-en">Since summer 2026, I am back to serving families full-time. To date, I have had the honor of supporting around 30 births and working with over 60 families.</span>
+                </p>
+            </section>
+
+            <!-- STECKBRIEF -->
+            <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-[#f7f2ec] p-8 md:p-12 border border-brandBorder/10 shadow-sm mt-8">
+                <div class="md:col-span-7 space-y-6">
+                    <div>
+                        <h2 class="serif-heading text-3xl md:text-5xl text-[#6e4f3a] font-normal leading-tight">
+                            <span class="lang-de">Ein kleiner Einblick in meine <em class="italic">Welt</em></span>
+                            <span class="lang-en">A Little Glimpse into My <em class="italic">World</em></span>
+                        </h2>
+                    </div>
+
+                    <ul class="space-y-4 text-xs md:text-sm text-brandText font-light leading-relaxed">
+                        <li class="flex items-start gap-3">
+                            <span class="text-brandTerracotta text-base leading-none">✹</span>
+                            <span class="lang-de">Ich habe vier Schwangerschaften durchlebt und drei wunderbare Kinder auf die Welt gebracht (eine Geburt im Krankenhaus, zwei entspannte Hausgeburten und eine bewusste Entscheidung für einen Abbruch).</span>
+                            <span class="lang-en">I have experienced four pregnancies and brought three wonderful children into the world (one hospital birth, two peaceful home births, and a conscious choice for a termination).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brandTerracotta text-base leading-none">✹</span>
+                            <span class="lang-de">Ich bin Steinbock mit Aszendent Jungfrau. Im Human Design bin ich Generator.</span>
+                            <span class="lang-en">I am a Capricorn with Virgo rising. In Human Design, I am a Generator.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brandTerracotta text-base leading-none">✹</span>
+                            <span class="lang-de">Ich erfuhr eine große Bandbreite an postpartum – vom 1. Wochenbett als Single-Mom bei meinen Eltern, über eine wunderbar kuschelige Kennenlernzeit mit meinem Mann, bis hin zu einer sehr herausfordernden Phase mit einem High-Need-Baby und 2 Geschwisterkinder, die Sommerferien hatten.</span>
+                            <span class="lang-en">I have navigated a broad spectrum of postpartum journeys — from my first postpartum as a single mom living with my parents, to a tender cocooning time with my husband, to an intensely challenging season with a high-need baby and two older siblings on summer vacation.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brandTerracotta text-base leading-none">✹</span>
+                            <span class="lang-de">Ich liebe es einfach, Dinge zu strukturieren, zu planen und den Überblick zu behalten.</span>
+                            <span class="lang-en">I genuinely love organizing, planning ahead, and holding a calm overview.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brandTerracotta text-base leading-none">✹</span>
+                            <span class="lang-de">Wenn ich die Zeit und Ruhe habe, gibt es für mich kaum was Schöneres etwas Gesundes und Leckeres für meine Liebsten zu kochen.</span>
+                            <span class="lang-en">When time and calm allow, there is hardly anything I treasure more than cooking something deeply nourishing and delicious for the people I love.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brandTerracotta text-base leading-none">✹</span>
+                            <span class="lang-de">Ich weiß, wie es sich anfühlt eine Familie zu gründen, ohne die eigenen Eltern und Schwiegereltern im selben Land zu haben.</span>
+                            <span class="lang-en">I intimately know what it feels like to build a family without your own parents or in-laws living in the same country.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brandTerracotta text-base leading-none">✹</span>
+                            <span class="lang-de">Ich gehe super gerne früh schlafen – und mit „früh“ meine ich tatsächlich 20:30 bis 21:00 Uhr! Dementsprechend stehe ich aber auch gerne früh und vor allen anderen auf!</span>
+                            <span class="lang-en">I love going to bed early — and by "early" I truly mean 8:30 to 9:00 PM! Consequently, I love waking up at dawn before the rest of the house stirs!</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brandTerracotta text-base leading-none">✹</span>
+                            <span class="lang-de">Meine Kinder gehen auf eine Waldorfschule. Aber keine Sorge: Ich bin keine Hardcore-Impfgegnerin und meinen Namen tanzen kann ich ehrlich gesagt auch nicht!</span>
+                            <span class="lang-en">My children attend a Waldorf school. But rest assured: I'm not a dogmatic ideologue, and truth be told, I can't dance my name either!</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brandTerracotta text-base leading-none">✹</span>
+                            <span class="lang-de">Mein absolut liebstes Guilty Pleasure ist ein richtig guter, viel zu teurer Kaffee. Alkohol trinke ich dagegen sehr selten.</span>
+                            <span class="lang-en">My absolute favorite guilty pleasure is an exquisite, overpriced specialty coffee. I rarely drink alcohol.</span>
+                        </li>
+                    </ul>
+
+                    <div class="pt-2">
+                        <a href="#kontakt" class="btn-editorial">
+                            <span class="lang-de">MIT MIR ARBEITEN</span>
+                            <span class="lang-en">WORK WITH ME</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-5">
+                    <div class="photo-frame max-w-md mx-auto shadow-md">
+                        <img src="einpaardinge.jpg" alt="Ein kleiner Einblick in meine Welt" class="w-full h-[520px] object-cover" loading="lazy" width="500" height="520">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- UNTERSEITE: SCHWANGERSCHAFT -->
+        <div id="tab-angebot-schwangerschaft" class="page-tab space-y-12 max-w-5xl mx-auto px-4" aria-hidden="true">
+            <div class="text-center border-b border-brandBorder/10 pb-6 pt-4">
+                <h2 class="serif-heading text-4xl md:text-6xl text-brandText font-normal">
+                    <span class="lang-de">Schwangerschaft</span>
+                    <span class="lang-en">Pregnancy</span>
+                </h2>
+            </div>
+
+            <section class="bg-brandCardBg p-8 md:p-12 border border-brandBorder/20 shadow-sm space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                    <div class="md:col-span-6">
+                        <div class="photo-frame max-w-md mx-auto">
+                            <img src="angebotschwangrschaft.jpg" alt="Schwangerschaft Begleitung" class="w-full h-[450px] object-cover" loading="lazy" width="600" height="450">
+                        </div>
+                    </div>
+                    <div class="md:col-span-6 space-y-6">
+                        <h3 class="serif-heading text-3xl md:text-4xl text-brandText font-normal">
+                            <span class="lang-de">Schwangerschafts <em class="italic">Begleitung</em></span>
+                            <span class="lang-en">Pregnancy <em class="italic">Support</em></span>
+                        </h3>
+                        
+                        <p class="text-xs md:text-sm text-brandText font-light leading-relaxed">
+                            <span class="lang-de">Jede schwangere Person steht vor eigenen Herausforderungen und wünscht sich unterschiedliche Impulse, um diese Transformation bestmöglich zu navigieren. Im Folgenden findest du ein paar beispielhafte Punkte, die bei einem Treffen in der Schwangerschaft integriert werden könnten. Je nachdem, was du gerade brauchst, besprechen wir gemeinsam, wie so eine Sitzung aussehen soll.</span>
+                            <span class="lang-en">Every pregnant person faces their own distinct emotional and physical landscape and benefits from tailored guidance. Below are inspiring examples of what we can weave into our prenatal sessions. Depending on where you are right now, we co-create what each meeting looks like.</span>
+                        </p>
+                        
+                        <ul class="space-y-4 text-xs md:text-sm text-brandText font-light leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Beratung bei Übelkeit:</strong> Ernährungsstil, Lebensweise, Stress und andere Themen können die Übelkeit in den ersten Wochen stark beeinflussen.</span>
+                                <span class="lang-en"><strong>Morning Sickness & Nausea Support:</strong> Dietary rhythms, daily pacing, nervous system regulation, and lifestyle shifts can profoundly ease nausea during the early weeks.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Unterstützung, den richtigen Geburtsort zu finden:</strong> Wo wir gebären, hat einen großen Einfluss darauf, wie sicher wir sich fühlen. Gerne informiere ich euch über eure Möglichkeiten und welche Vor- und Nachteile diese mit sich bringen.</span>
+                                <span class="lang-en"><strong>Choosing Your Birth Space:</strong> Where we birth shapes how deeply safe and relaxed we feel. I gladly guide you through your local options in Berlin, weighing the unique qualities of each setting.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Geburtsplan:</strong> Erkunden deiner Wünsche, Vorbereitung auf verschiedene Szenarien und Erlernen, wie du dich im Krankenhaus oder bei einer Hausgeburt selbstbewusst bewegst.</span>
+                                <span class="lang-en"><strong>Birth Preferences & Planning:</strong> Exploring your values, preparing for diverse scenarios, and learning how to navigate clinical or home settings with calm self-advocacy.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Aufklärung:</strong> Wir besprechen Interventionen, Schmerzmittel, Geburtsoptionen (Zwillinge, VBAC/Geburt nach Kaiserschnitt, Hausgeburt etc.) und was das alles konkret für dich bedeutet.</span>
+                                <span class="lang-en"><strong>Informed Education:</strong> We candidly review medical interventions, pain relief modalities, options like VBAC, twins, or home birth, and what each pathway concretely entails for you.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Schwangerenmassage:</strong> Manchmal ist es das Wertvollste, einfach auf der Massagebank zu liegen und das warme Öl auf deinem Körper zu spüren, um zu merken, wer du gerade bist und was du brauchst. Ich komme dann mit einer Liege zu dir und massiere deinen Körper mit einer Wellnessmassage.</span>
+                                <span class="lang-en"><strong>Prenatal Massage:</strong> Often the most restorative gift is simply resting on a heated massage table, feeling warm nurturing oil on your body, reconnecting to yourself. I bring my professional table directly to your home for a soothing therapeutic massage.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Praktische Vorbereitung auf Baby & Wochenbett:</strong> Was braucht ihr wirklich? Postpartum-Ernährung, das Setzen von Grenzen zum Schutz eurer „Baby-Bubble“ nach der Geburt und die Planung der Unterstützung, die du verdienst.</span>
+                                <span class="lang-en"><strong>Practical Postpartum & Baby Preparation:</strong> What do you truly need? Postpartum nutrition, establishing boundaries to protect your sacred "baby bubble", and orchestrating the community care you deserve.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Impulse zur Selbstfürsorge:</strong> Unser Körper ist das erste Zuhause deines Babys. Wenn du dich gut fühlst, hat das direkt auch eine Auswirkung auf dein Kind. Sei nachsichtig mit dir: Wenn du jetzt lernst, dich gut um dich zu kümmern, wird es dir, wenn dein Baby da ist, leichter fallen, die Routinen hier und da in den Alltag einzubauen. Khalsa-Way-Yoga, Ayurveda, Atemarbeit, Meditation, Visualisierung und Bewegung können hilfreiche Methoden für dein Wohlbefinden sein.</span>
+                                <span class="lang-en"><strong>Self-Care Rituals:</strong> Your body is your baby's first sanctuary. When you feel grounded and held, your baby feels it directly. Be gentle with yourself: cultivating micro-moments of care now will help these practices flow naturally once your baby arrives. Khalsa Way Yoga, Ayurveda, breathwork, visualization, and mindful movement are gentle tools we can integrate.</span>
+                            </li>
+                        </ul>
+
+                        <div class="border-t border-brandBorder/10 pt-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+                            <span class="serif-heading text-2xl font-bold text-brandText">
+                                <span class="lang-de">200 Euro pro Sitzung (ca. 2 Stunden)</span>
+                                <span class="lang-en">€200 per session (approx. 2 hours)</span>
+                            </span>
+                            <a href="#kontakt" class="btn-editorial">
+                                <span class="lang-de">JETZT ANFRAGEN</span>
+                                <span class="lang-en">INQUIRE NOW</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- UNTERSEITE: GEBURT (50/50 VOLLFLÄCHIG) -->
+        <div id="tab-angebot-geburt" class="page-tab space-y-10 w-full" aria-hidden="true">
+            <div class="max-w-5xl mx-auto px-4 text-center border-b border-brandBorder/10 pb-6 pt-4">
+                <h2 class="serif-heading text-4xl md:text-6xl text-brandText font-normal">
+                    <span class="lang-de">Geburt</span>
+                    <span class="lang-en">Birth</span>
+                </h2>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-4 space-y-4 text-sm md:text-base text-brandText font-light leading-relaxed">
+                <p class="lang-de">
+                    Gemeinsam mit dir, deinem/deiner Partner/in / deiner Begleitperson und deiner Hebamme schaffe ich eine geschützte und wohlige Geburtsatmosphäre. Mein Anliegen ist es, dir genau den Raum zu schenken, den du brauchst, um dich voller Vertrauen öffnen zu können – mit so viel Privatsphäre wie möglich und so viel verlässlicher Unterstützung wie gewünscht.
+                </p>
+                <p class="lang-en">
+                    Together with you, your partner / support person, and your midwife, I help weave a peaceful, sacred birthing environment. My dedication is to hold the exact space you need to surrender into birth with trust — ensuring as much intimacy as possible and as much reliable presence as you desire.
+                </p>
+                <p class="lang-de">
+                    Ich begleite dich und deine Familie in ganz Berlin: zu Hause, im Geburtshaus oder im Krankenhaus. Ganz egal, wie deine Traumgeburt aussieht – ob eine natürliche Geburt, ein Kaiserschnitt oder eine VBAC (vaginale Geburt nach Kaiserschnitt).
+                </p>
+                <p class="lang-en">
+                    I support you and your family across all of Berlin: at home, in a birth center, or in hospital. Whatever your vision of birth is — an unmedicated physiologic birth, a cesarean, or a VBAC (vaginal birth after cesarean).
+                </p>
+                <p class="lang-de">
+                    Du kannst dir eine Doula wie eine professionelle Freundin vorstellen: Eine vertraute Begleiterin mit viel Empathie und Präsenz, aber gleichzeitig mit fundiertem Fachwissen, gesunden Grenzen und dem reinen Fokus auf deine Wünsche.
+                </p>
+                <p class="lang-en">
+                    You can imagine a doula as a professional, loving friend: a familiar companion filled with empathy, grounded calm, professional expertise, clear boundaries, and unwavering focus on your autonomy.
+                </p>
+                <p class="lang-de">
+                    Dein Geburtsraum gehört ganz dir: Ohne Bewertung und ohne eigene Agenda begleite ich dich auf deinem Weg. Ich halte dir den Rücken frei – emotional, praktisch und informativ –, damit du selbstbewusst eigene Entscheidungen triffst und dich rundum geborgen und getragen fühlst.
+                </p>
+                <p class="lang-en">
+                    The birth space is yours alone: Free from judgment or personal agendas, I walk alongside you. I hold your back — emotionally, practically, and informatively — so you make empowered decisions and feel completely safe, cherished, and held throughout.
+                </p>
+            </div>
+
+            <section class="w-full grid grid-cols-1 md:grid-cols-2 items-stretch border-y border-brandBorder/15">
+                <div class="w-full h-[400px] md:h-auto min-h-[500px]">
+                    <img src="vorteiledoulla.jpg" alt="Geburtsbegleitung Atmosphäre" class="w-full h-full object-cover" loading="lazy" width="800" height="600">
+                </div>
+
+                <div class="bg-[#ebdcd1] p-8 md:p-12 lg:p-16 flex flex-col justify-between space-y-6">
+                    <div>
+                        <span class="mono-text text-xs text-brandTerracotta uppercase tracking-widest">
+                            <span class="lang-de">LEISTUNGSÜBERSICHT</span>
+                            <span class="lang-en">INCLUDED IN BIRTH SUPPORT</span>
+                        </span>
+                        <h3 class="serif-heading text-3xl md:text-4xl text-brandText font-normal leading-tight mt-1 mb-6">
+                            <span class="lang-de">Was meine Geburtsbegleitung umfasst</span>
+                            <span class="lang-en">What My Birth Support Includes</span>
+                        </h3>
+
+                        <ul class="space-y-3 text-xs md:text-sm text-brandText font-light leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Unverbindliches Kennenlernen:</strong> Ein erstes Gespräch, um zu spüren, ob die Chemie zwischen uns stimmt.</span>
+                                <span class="lang-en"><strong>Free Initial Consultation:</strong> A relaxed first meeting to sense our mutual connection and chemistry.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de">Erfahrung aus meinen eigenen 3 Geburten und den der 30 Familien, die ich bisher bei ihrer Geburt begleiten durfte.</span>
+                                <span class="lang-en">Wisdom from my own 3 births and the nearly 30 families I have accompanied through labor.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Treffen (ca. 2 Stunden):</strong> Raum für deine Fragen, Wünsche und die gemeinsame Vorbereitung auf verschiedene Geburtsszenarien, sowie Tipps, die du mit zu Terminen bringen kannst, damit du all deine Optionen kennst.</span>
+                                <span class="lang-en"><strong>In-Depth Prenatal Sessions (approx. 2 hours):</strong> Dedicated space for your questions, desires, birth mapping, and tools for doctor/clinic appointments.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Kennenlernen deiner Hebamme:</strong> Auf Wunsch nehme ich an einem Gespräch mit deiner Hebamme teil, damit wir als Team bestmöglich harmonieren.</span>
+                                <span class="lang-en"><strong>Connecting with Your Midwife:</strong> If desired, I join a conversation with your midwife to ensure harmonious teamwork.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Laufende Betreuung:</strong> Ständige Telefon- und E-Mail-Bereitschaft für dich und deine/n Partner/in bei allen aufkommenden Fragen.</span>
+                                <span class="lang-en"><strong>Ongoing Availability:</strong> Phone, messaging, and email support throughout pregnancy for you and your partner.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>24/7 Rufbereitschaft:</strong> Ab 17 Tage vor bis 17 Tage nach deinem errechneten Geburtstermin bin ich rund um die Uhr für dich auf Abruf.</span>
+                                <span class="lang-en"><strong>24/7 On-Call Window:</strong> Dedicated round-the-clock on-call availability from 17 days before until 17 days after your estimated due date.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Atmosphäre:</strong> Aktives Gestalten einer beruhigenden Umgebung (z. B. durch gedimmtes Licht, Kerzen, Entspannungsmusik/Töne und Aromatherapie).</span>
+                                <span class="lang-en"><strong>Ambiance Creation:</strong> Intentionally creating a calm sanctuary (dimmed lighting, candles, soothing soundscapes, aromatherapy).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Geburtsraum:</strong> Haltender Raum, Ermutigung, Führung durch Atemarbeit und Fokus.</span>
+                                <span class="lang-en"><strong>Continuous Space-Holding:</strong> Constant emotional anchoring, encouragement, vocal toning, and breathwork guidance.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Körperliche & natürliche Schmerzlinderung:</strong> Einsatz bewährter Methoden wie Rebozo-Techniken, Massagen, sanfte Berührungen, TENS-Gerät und Atemübungen.</span>
+                                <span class="lang-en"><strong>Physical & Comfort Measures:</strong> Rebozo techniques, acupressure, counter-pressure massage, TENS unit, and hands-on comfort.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Stärkung deiner Begleitperson:</strong> Aktive Einbindung deines/deiner Partner/in, damit auch er/sie sich sicher, entspannt und einbezogen fühlt.</span>
+                                <span class="lang-en"><strong>Partner Empowerment:</strong> Actively supporting your partner so they feel confident, rested, and deeply involved.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de">Geburtsfotos und Videoaufnahmen (falls dies von dir gewünscht ist).</span>
+                                <span class="lang-en">Birth Photography & Video: Capturing tender, raw memories of your birth journey (if desired).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Kommunikation & Fürsprache:</strong> Unterstützung beim Austausch mit dem Klinikpersonal und beim selbstbewussten Vertreten deiner Wünsche.</span>
+                                <span class="lang-en"><strong>Advocacy & Communication:</strong> Supporting gentle, assertive communication with clinical staff.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de">Eine vertraute Vertretungs-Doula.</span>
+                                <span class="lang-en">A Trusted Backup Doula: Guaranteed backup coverage for seamless peace of mind.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="border-t border-brandBorder/10 pt-6 space-y-3">
+                        <span class="serif-heading text-3xl font-bold text-brandText block">
+                            <span class="lang-de">2100€ - Geburtsbegleitung</span>
+                            <span class="lang-en">€2,100 — Birth Support</span>
+                        </span>
+                        <p class="text-xs italic text-brandTextMuted leading-relaxed">
+                            <span class="lang-de">Wenn du BIPOC, Alleinerziehende oder eine Familie mit geringem Einkommen bist, melde dich gerne – ich bin offen für Energie- oder Arbeitsaustausch.</span>
+                            <span class="lang-en">If you are BIPOC, a single mother, or living on a low income, please reach out — I am open to energy exchange or flexible sliding scale arrangements.</span>
+                        </p>
+                        <div class="pt-2">
+                            <a href="#kontakt" class="btn-editorial">
+                                <span class="lang-de">ERSTGESPRÄCH BUCHEN</span>
+                                <span class="lang-en">BOOK A CONSULTATION</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- UNTERSEITE: POSTPARTUM -->
+        <div id="tab-angebot-postpartum" class="page-tab space-y-12 max-w-5xl mx-auto px-4" aria-hidden="true">
+            <div class="text-center border-b border-brandBorder/10 pb-6 pt-4">
+                <h2 class="serif-heading text-4xl md:text-6xl text-brandText font-normal">
+                    <span class="lang-de">Postpartum / Wochenbett</span>
+                    <span class="lang-en">Postpartum & Fourth Trimester</span>
+                </h2>
+            </div>
+
+            <section class="bg-brandCardBg p-8 md:p-12 border border-brandBorder/20 shadow-sm space-y-8">
+                <div class="space-y-4 text-sm md:text-base text-brandText font-light leading-relaxed max-w-4xl mx-auto border-b border-brandBorder/10 pb-6">
+                    <p class="lang-de">
+                        Wenn ein Baby geboren wird, steht die Welt Kopf, denn es wird auch eine Mutter, sowie eine neue Familie geboren.
+                    </p>
+                    <p class="lang-en">
+                        When a baby is born, the world tilts — because a mother and a brand-new family are also born.
+                    </p>
+                    <p class="lang-de">
+                        Eine neugeborene Mama – egal ob beim ersten oder fünften Kind – ist in dieser Zeit genauso verletzlich und schutzbedürftig wie ihr Baby selbst. Mütter sind oft unglaublich müde und gleichzeitig so wach, um jedes Signal des Babies zu verstehen: Sie lernen sich völlig neu kennen und auch der Partner begegnet einer neuen Frau.
+                    </p>
+                    <p class="lang-en">
+                        A newly born mother — whether welcoming her first or fifth child — is just as tender, vulnerable, and in need of protection as her newborn baby. Mothers are often unimaginably exhausted yet acutely awake to every newborn cue: they are discovering a new self, and partners are meeting a transformed woman.
+                    </p>
+                    <p class="lang-de">
+                        In vielen Kulturen weltweit ist es tief verankert, Frauen diese geschützte Zeit zu schenken. Oft sind es die traditionellen 40 Tage, in denen sich Mütter ganz erholen und ankommen dürfen – frei von normalen Verpflichtungen. Was auf den ersten Blick extrem oder unmodern wirken mag, wird beim Blick auf den Alltag einer jungen Mutter schnell klar: Umfassende Unterstützung im Haushalt und im Hintergrund ist in dieser Phase unverzichtbar.
+                    </p>
+                    <p class="lang-en">
+                        In traditional cultures across the globe, it is deeply sacred to gift mothers an undisturbed cocoon during this time. Often honoring the traditional 40 days, mothers are encouraged to rest completely, bond, and heal — released from daily chores and societal obligations. While this may seem unusual in modern life, looking at the reality of new parenthood makes it obvious: comprehensive, unobtrusive support in the background is invaluable.
+                    </p>
+                    <p class="lang-de">
+                        Doulas sind dafür da ohne eigene Wertung ein gutes Gefühl und Sicherheit zu geben. Menschen, bei denen man sich gesehen fühlt und die liebevoll für einen sorgen. Sie bleiben entspannt – auch wenn Stress aufkommt, sind positiv eingestellt, haben eine unkomplizierte Haltung zu ihrer eigenen Identität, können einen Haushalt effektiv schmeißen und haben Erfahrung im Umgang mit frischgebackenen Müttern und Babys.
+                    </p>
+                    <p class="lang-en">
+                        Doulas are here to bring safety, non-judgmental warmth, and ease. People in whose presence you feel deeply seen and cherished. Doulas stay calm under pressure, maintain an uplifting grounded spirit, keep a household running effortlessly, and hold rich experience caring for new mothers and infants.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                    <div class="md:col-span-6">
+                        <div class="photo-frame max-w-md mx-auto sticky top-6">
+                            <img src="postpartum.jpg" alt="Postpartum Wochenbett" class="w-full h-[420px] object-cover" loading="lazy" width="600" height="420">
+                        </div>
+                    </div>
+                    <div class="md:col-span-6 space-y-6">
+                        <h3 class="serif-heading text-2xl md:text-3xl text-brandText font-normal">
+                            <span class="lang-de">Meine Leistungen im Wochenbett:</span>
+                            <span class="lang-en">Postpartum Care Services:</span>
+                        </h3>
+
+                        <ul class="space-y-3 text-xs md:text-sm text-brandText font-light leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Wochenbett-Nahrung:</strong> Nährende, kräftigende Verpflegung für deine Regeneration.</span>
+                                <span class="lang-en"><strong>Postpartum Nourishment:</strong> Nutrient-dense, warming meals and broths tailored for physical recovery.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Geburtsverarbeitung:</strong> Geschützter Raum zum Nachbesprechen und Verarbeiten deiner Geburtserfahrung.</span>
+                                <span class="lang-en"><strong>Birth Story Integration:</strong> A compassionate, confidential space to debrief and process your birth.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Warme Ölmassagen</strong></span>
+                                <span class="lang-en"><strong>Warm Herbal Oil Massages</strong></span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Haushalt & Verpflegung:</strong> Zubereitung von Mahlzeiten und leichte Entlastung im Haushalt.</span>
+                                <span class="lang-en"><strong>Household & Light Support:</strong> Preparing wholesome dishes and providing gentle household ease.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Schlaf-Unterstützung:</strong> Sanfte Begleitung bei Überforderung und extremem Schlafmangel.</span>
+                                <span class="lang-en"><strong>Rest & Sleep Sanctuary:</strong> Holding baby so you can nap, rest, shower, or simply breathe.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Laufender Support:</strong> Unbegrenzte Telefon- und E-Mail-Beratung für all deine Fragen.</span>
+                                <span class="lang-en"><strong>Continuous Check-Ins:</strong> Unlimited phone and messaging guidance for all your questions.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Netzwerk & Empfehlungen:</strong> Vermittlung von Fachpersonal und Spezialist:innen bei Bedarf.</span>
+                                <span class="lang-en"><strong>Trusted Referrals:</strong> Direct recommendations to lactation consultants and specialists.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Ganzheitliche Erholung:</strong> Begleitung deiner körperlichen und emotionalen Heilung (inkl. Begleitung zu Arztterminen).</span>
+                                <span class="lang-en"><strong>Holistic Recovery:</strong> Holding space for your physical and emotional healing (including appointments).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brandTerracotta">✹</span>
+                                <span class="lang-de"><strong>Baby-Pflege & -Praxis:</strong> Praktisches Wissen, Anleitung und bewährte Beruhigungstechniken, einfühlsame Anleitung für das Binden von Tragetüchern und Slings.</span>
+                                <span class="lang-en"><strong>Newborn Care & Babywearing:</strong> Gentle soothing wisdom, newborn care, and guidance on wraps and slings.</span>
+                            </li>
+                        </ul>
+
+                        <!-- PREISBEREICH -->
+                        <div class="border-t border-brandBorder/10 pt-5 space-y-2">
+                            <span class="serif-heading text-2xl font-bold text-brandText block">
+                                <span class="lang-de">60 Euro pro Stunde / 65€ bei Zwillingen</span>
+                                <span class="lang-en">€60 per hour / €65 for twins</span>
+                            </span>
+                            <div class="mono-text text-xs md:text-sm text-brandBrown space-y-1 pt-1 font-semibold">
+                                <p>✹ 2 hrs x 10 sessions — 1.100€</p>
+                                <p>✹ 4 hrs x 10 sessions — 2.200€</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/80 p-6 md:p-8 border border-brandBorder/10 space-y-4">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-brandBorder/10 pb-4">
+                        <h4 class="serif-heading text-2xl md:text-3xl text-brandText font-normal">
+                            <span class="lang-de">Kräuterbad und postpartum Massage (ca. 3 Stunden)</span>
+                            <span class="lang-en">Herbal Bath & Postpartum Massage Ritual (approx. 3 hours)</span>
+                        </h4>
+                        <span class="serif-heading text-2xl font-bold text-brandTerracotta whitespace-nowrap">210 Euro</span>
+                    </div>
+                    <p class="text-xs md:text-sm text-brandText font-light leading-relaxed">
+                        <span class="lang-de">Wochenbettmassagen haben in der ayurvedischen Medizin eine lange Tradition. Eine Bauchmassage mit speziellen Ölen unterstützt deinen Körper bei der Rückbildung. Der gesamte Bauchraum erfährt Entspannung, die Organe finden leichter wieder an ihren ursprünglichen Platz zurück. Dadurch werden die Energien im dritten Chakra wieder zum fließen gebracht, besonders auch nach Kaiserschnitt, da dieser Bereich erst einmal getrennt wurde. Diese Massage ist tief entspannend. Im Ayurveda wird diese Massage am Anfang täglich im Wochenbett empfohlen, später wöchentlich.</span>
+                        <span class="lang-en">Postpartum massage carries a revered tradition in Ayurvedic medicine. Abdominal massage with tailored herbal oils gently aids uterine involution and organ realignment. The entire core releases deep tension, helping internal organs settle into place. This harmonizes energetic flow in the solar plexus chakra — especially vital after a cesarean birth where tissues were severed. Deeply grounding and restorative, Ayurveda traditionally recommends this massage daily in the earliest weeks, followed by weekly sessions.</span>
+                    </p>
+                </div>
+
+                <div class="text-center pt-2">
+                    <a href="#kontakt" class="btn-editorial">
+                        <span class="lang-de">ANFRAGE SENDEN</span>
+                        <span class="lang-en">SEND INQUIRY</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- UNTERSEITE: GEBÄRPOOL -->
+        <div id="tab-angebot-gebaerpool" class="page-tab space-y-12 max-w-5xl mx-auto px-4" aria-hidden="true">
+            <div class="text-center border-b border-brandBorder/10 pb-6 pt-4">
+                <h2 class="serif-heading text-4xl md:text-6xl text-brandText font-normal">
+                    <span class="lang-de">Gebärpool Verleih</span>
+                    <span class="lang-en">Birth Pool Rental</span>
+                </h2>
+            </div>
+
+            <section class="bg-brandCardBg p-8 md:p-12 border border-brandBorder/20 shadow-sm space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-6">
+                        <div class="photo-frame max-w-md mx-auto">
+                            <img src="gebaerpool.jpg" alt="Gebärpool Verleih" class="w-full h-[380px] object-cover" loading="lazy" width="600" height="380">
+                        </div>
+                    </div>
+                    <div class="md:col-span-6 space-y-6">
+                        <h3 class="serif-heading text-3xl md:text-4xl text-brandText font-normal">
+                            <span class="lang-de">Sanfte Wassergeburt <em class="italic">zuhause</em></span>
+                            <span class="lang-en">Gentle Water Birth <em class="italic">at Home</em></span>
+                        </h3>
+                        <p class="text-sm md:text-base text-brandText leading-relaxed font-light">
+                            <span class="lang-de">Wasser bietet während der Geburt optimale Schwerelosigkeit, Entlastung und natürlichen Schmerzschutz. Mein Leih-Set enthält alles, was du für deine Hausgeburt benötigst.</span>
+                            <span class="lang-en">Water offers optimal buoyancy, deep physical relief, and natural comfort during birth. My complete rental set includes everything required for your home water birth.</span>
+                        </p>
+                        
+                        <ul class="space-y-2 text-xs md:text-sm text-brandText font-light border-t border-brandBorder/10 pt-4">
+                            <li class="lang-de">✹ <strong>Komplettes Equipment:</strong> Pool, elektrische Luftpumpe, Wasserpumpe & Schlauch</li>
+                            <li class="lang-en">✹ <strong>Complete Equipment:</strong> Pool, electric air pump, submersible water pump & food-grade hose</li>
+                            <li class="lang-de">✹ <strong>Hygiene:</strong> Inklusive neuem, originalverpacktem Einweg-Inliner</li>
+                            <li class="lang-en">✹ <strong>Hygiene:</strong> Includes brand-new, sealed single-use liner</li>
+                            <li class="lang-de">✹ <strong>Leihdauer:</strong> Flexibel von 37+0 bis nach der Geburt</li>
+                            <li class="lang-en">✹ <strong>Rental Period:</strong> Flexible window from 37+0 weeks until after your baby arrives</li>
+                        </ul>
+
+                        <div class="border-t border-brandBorder/10 pt-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+                            <span class="serif-heading text-2xl font-bold text-brandText">
+                                <span class="lang-de">150 € / Leihe</span>
+                                <span class="lang-en">€150 / rental</span>
+                            </span>
+                            <a href="#kontakt" class="btn-editorial">
+                                <span class="lang-de">RESERVIERUNG ANFRAGEN</span>
+                                <span class="lang-en">REQUEST RESERVATION</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- UNTERSEITE: TESTIMONIALS -->
+        <div id="tab-testimonials" class="page-tab space-y-16 max-w-5xl mx-auto px-4" aria-hidden="true">
+            <div class="text-center space-y-2 border-b border-brandBorder/10 pb-6 pt-4">
+                <span class="mono-text text-xs text-brandTerracotta uppercase">
+                    <span class="lang-de">ERFAHRUNGEN & WORTE DER LIEBE</span>
+                    <span class="lang-en">WORDS OF LOVE & EXPERIENCES</span>
+                </span>
+                <h2 class="serif-heading text-4xl md:text-6xl text-brandText font-normal">
+                    <span class="lang-de">Erfahrungen & <em class="italic">Testimonials</em></span>
+                    <span class="lang-en">Stories & <em class="italic">Testimonials</em></span>
+                </h2>
+                <p class="text-xs md:text-sm text-brandText font-light pt-2 max-w-xl mx-auto">
+                    <span class="lang-de">Was Familien über die gemeinsame Zeit, die Unterstützung während der Schwangerschaft, bei der Geburt und im Wochenbett berichten.</span>
+                    <span class="lang-en">What families share about our shared journey through pregnancy, birth, and the fourth trimester.</span>
+                </p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- 1. SELINA (2026) -->
+                <div class="bg-earthTan p-8 md:p-12 border border-brandBorder/20 shadow-sm relative">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                        <div class="md:col-span-4 text-center">
+                            <img src="selina.jpg" alt="Selina Familie" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover mx-auto border-2 border-white/40" loading="lazy" width="200" height="200">
+                        </div>
+                        <div class="md:col-span-8 space-y-6 relative z-10">
+                            <span class="serif-heading text-6xl text-white/40 absolute -top-6 -left-4 select-none">“</span>
+                            <blockquote class="serif-heading text-lg md:text-xl text-brandText font-normal leading-relaxed italic">
+                                „That was the most wonderful support ever! I am so grateful to you and my family for supporting us with our second child and now again with our third. Holding space for us was so valuable, even during the birth; it was the most beautiful gift we could have given ourselves! Forever connected in the cycle of pregnancy, birth, and the postpartum period. Your Mother Blessing and Closing the Bones were so beautiful; I felt so emotionally supported just knowing you were there. And your postpartum course with all those amazing women was incredibly enriching! I hope that many more women will have this experience with you. Thank you so much!“
+                            </blockquote>
+                            <div class="border-t border-brandBorder/20 pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                                <span class="mono-text text-xs uppercase tracking-widest text-brandText font-semibold">
+                                    — Selina, Julien, Zoe, Lino und Sol
+                                </span>
+                                <span class="mono-text text-xs text-brandText uppercase">
+                                    Berlin ‘26
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. CLARA & NICKI (2023) -->
+                <div class="bg-earthLinen p-8 md:p-12 border border-brandBorder/20 shadow-sm relative">
+                    <span class="serif-heading text-6xl text-brandBrown/30 absolute top-4 left-6 select-none">“</span>
+                    <div class="relative z-10 space-y-6">
+                        <blockquote class="serif-heading text-xl md:text-2xl text-brandText font-normal leading-relaxed italic">
+                            „Liebe Lara, deine Begleitung während meiner Schwangerschaft war wie ein roter Faden aus liebevoller Unterstützung, Austausch, und Informationen, der mir dabei half trotz einer stressigen Zeit und einigen Hürden ganz bei mir und meinem Baby zu bleiben, und in uns und meinen Körper zu vertrauen. Dein ruhiges, erfahrenes Da-Sein während der gesamten Geburt half uns sehr dabei, meiner Tochter und mir eine wundervoll sanfte und stärkende Geburtsreise bei uns Zuhause zu schenken. Die sanfte, liebevolle Art mit der du Raum für jede Emotion hältst, hat mir von Anfang an immer die Sicherheit und das Vertrauen Geschenkt, alle Sorgen und Freuden mit dir zu teilen. Im Wochenbett hast du mir wundervolle Wärme geschenkt und mich immer daran erinnert selbst nachzufühlen, meine Bedürfnisse zu äußern und mich auch mal feiern zu lassen! Ich danke dir von Herzen für alles.“
+                        </blockquote>
+                        <div class="border-t border-brandBorder/10 pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <span class="mono-text text-xs uppercase tracking-widest text-brandBrown font-semibold">
+                                — Clara & Nicki mit Rumi
+                            </span>
+                            <span class="mono-text text-xs text-brandTextMuted uppercase">
+                                Berlin ‘23
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. VANNE, TOPHIE UND PAUL NOÉ (2022) -->
+                <div class="bg-earthLinen border border-brandBorder/20 shadow-sm overflow-hidden p-6 md:p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                        <div class="md:col-span-5 text-center">
+                            <img src="testimonialpaar.jpg" alt="Vanne, Tophie und Paul Noé" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover mx-auto border-2 border-brandBorder/20" loading="lazy" width="200" height="200">
+                        </div>
+                        <div class="md:col-span-7 space-y-6 relative">
+                            <span class="serif-heading text-6xl text-brandBrown/30 absolute -top-8 -left-2 select-none">“</span>
+                            <blockquote class="serif-heading text-xl md:text-2xl text-brandText font-normal leading-relaxed italic relative z-10">
+                                „Liebe Lara, es war wunderschön Dich als meine Doula in so einer Lebensverändernden Zeit zu haben! Immer wieder hast du mich erinnert, was für eine große Umstellung ein Baby ist und, dass ich alle “Skills” in mir habe. Du hast mir geholfen auf meine Intuition zu vertrauen und mich darin bestärkt, dass eine Mama, insbesondere auch im Wochenbett und unter der Geburt, nur das ALLER-beste verdient! Tausend Dank! Du hast mir, unglaublich geholfen immer wieder in meine Mitte zu finden“
+                            </blockquote>
+                            <div class="border-t border-brandBorder/10 pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                                <span class="mono-text text-xs uppercase tracking-widest text-brandBrown font-semibold">
+                                    — Vanne, Tophie und Paul Noé
+                                </span>
+                                <span class="mono-text text-xs text-brandTextMuted uppercase">
+                                    Berlin ‘22
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. INA UND JONNA MAI (2022) -->
+                <div class="bg-earthBlush border border-brandBorder/20 shadow-sm overflow-hidden p-6 md:p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                        <div class="md:col-span-5 text-center">
+                            <img src="laraandbaby.jpg" alt="Ina und Jonna Mai" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover mx-auto border-2 border-brandBorder/20" loading="lazy" width="200" height="200">
+                        </div>
+                        <div class="md:col-span-7 space-y-6 relative">
+                            <span class="serif-heading text-6xl text-brandBrown/30 absolute -top-8 -left-2 select-none">“</span>
+                            <blockquote class="serif-heading text-xl md:text-2xl text-brandText font-normal leading-relaxed italic relative z-10">
+                                „Es war eine wundervolle und die genau richtige Entscheidung Lara als Doula während der Schwangerschaft, bei der Geburt und nach der Geburt an meiner Seite zu haben. Sie hat mich unendlich einfühlsam begleitet, bestärkt, mir Mut gemacht und mir geholfen ich zu sein und bei allen wichtigen Entscheidungen auf meine innere Stimme zu hören. Es tat mir gut eine so einfühlsame weiche liebe Seele bei mir zu haben während dieser für mich sehr herausfordernden Lebenssituation. Danke Lara“
+                            </blockquote>
+                            <div class="border-t border-brandBorder/10 pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                                <span class="mono-text text-xs uppercase tracking-widest text-brandBrown font-semibold">
+                                    — Ina und Jonna Mai
+                                </span>
+                                <span class="mono-text text-xs text-brandTextMuted uppercase">
+                                    Berlin ‘22
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. NATHALIE & NILS MIT IDA-LIV (2020) -->
+                <div class="bg-earthBlush p-8 md:p-12 border border-brandBorder/20 shadow-sm relative">
+                    <span class="serif-heading text-6xl text-brandTerracotta/30 absolute top-4 left-6 select-none">“</span>
+                    <div class="relative z-10 space-y-6">
+                        <blockquote class="serif-heading text-xl md:text-2xl text-brandText font-normal leading-relaxed italic">
+                            „Lara hat mich seit meiner achten Schwangerschaftswoche bis nach dem Wochenbett als Doula begleitet und es war die beste Entscheidung meines Lebens. Ich hab mich durch ihre zauberhafte Art und ihr umfassendes Wissen zu allen Themen in Weiblichkeit, Ayurveda und Yoga so gut betreut gefühlt, dass ich sie jeder werdenden Mama ans Herz lege. Ich war nach jedem Treffen mit ihr in Wärme und Liebe eingehüllt und hatte eine wunderschöne Schwangerschaft. Von Herzen Danke liebe Lara :).“
+                        </blockquote>
+                        <div class="border-t border-brandBorder/10 pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <span class="mono-text text-xs uppercase tracking-widest text-brandTerracotta font-semibold">
+                                — Nathalie & Nils mit Ida-Liv
+                            </span>
+                            <span class="mono-text text-xs text-brandTextMuted uppercase">
+                                Berlin ‘20
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GOOGLE BEWERTUNGEN HINWEIS -->
+                <div class="bg-[#ebdcd1] p-8 md:p-10 border border-brandBorder/20 shadow-sm text-center space-y-4">
+                    <div class="flex items-center justify-center gap-3">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
+                            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                            <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                        </svg>
+                        <span class="serif-heading text-2xl md:text-3xl text-brandText font-medium">5.0 Sterne auf Google</span>
+                    </div>
+                    
+                    <div class="flex justify-center items-center gap-1.5 text-[#e5a93c]">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+
+                    <p class="text-xs md:text-sm text-brandText font-light max-w-md mx-auto leading-relaxed">
+                        <span class="lang-de">Möchtest du weitere persönliche Erfahrungen und Empfehlungen lesen? Schau dir gerne alle Rezensionen auf Google Maps an.</span>
+                        <span class="lang-en">Curious to read more personal family experiences and reviews? Visit my Google Maps profile anytime.</span>
+                    </p>
+
+                    <div class="pt-2">
+                        <a href="https://share.google/LRzxU0psDgq4q9F4j" target="_blank" rel="noopener noreferrer" class="btn-editorial inline-block">
+                            <span class="lang-de">REZENSIONEN AUF GOOGLE ANSEHEN</span>
+                            <span class="lang-en">VIEW GOOGLE REVIEWS</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-earthLinen p-8 text-center border border-brandBorder/10 space-y-4">
+                <h3 class="serif-heading text-2xl md:text-3xl text-brandText">
+                    <span class="lang-de">Möchtest du auch begleitet werden?</span>
+                    <span class="lang-en">Would You Like to Be Supported?</span>
+                </h3>
+                <p class="text-xs md:text-sm text-brandText font-light max-w-md mx-auto">
+                    <span class="lang-de">Lass uns in einem unverbindlichen Erstgespräch kennenlernen und besprechen, wie ich dich unterstützen kann.</span>
+                    <span class="lang-en">Let’s connect for a relaxed, non-binding initial conversation to explore how I can best support you.</span>
+                </p>
+                <div class="pt-2">
+                    <a href="#kontakt" class="btn-editorial">
+                        <span class="lang-de">JETZT ANFRAGEN</span>
+                        <span class="lang-en">INQUIRE NOW</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- KONTAKT SUBPAGE -->
+        <div id="tab-kontakt" class="page-tab space-y-12 max-w-3xl mx-auto px-4" aria-hidden="true">
+            <div class="text-center space-y-2 border-b border-brandBorder/10 pb-6 pt-4">
+                <span class="mono-text text-xs text-brandTerracotta uppercase">
+                    <span class="lang-de">NIMM KONTAKT AUF</span>
+                    <span class="lang-en">GET IN TOUCH</span>
+                </span>
+                <h2 class="serif-heading text-4xl md:text-6xl text-brandText font-normal">
+                    <span class="lang-de">Schreib mir <em class="italic">gerne</em></span>
+                    <span class="lang-en">Say <em class="italic">Hello</em></span>
+                </h2>
+            </div>
+
+            <div class="bg-brandCardBg p-8 md:p-12 border border-brandBorder/20 shadow-sm space-y-8">
+                <div class="photo-frame max-w-sm mx-auto">
+                    <img src="larakontakt.JPG" alt="Lara Kontakt" class="w-full h-[360px] object-cover" width="400" height="360">
+                </div>
+
+                <div class="space-y-4 max-w-xl mx-auto text-center">
+                    <p class="serif-heading text-2xl md:text-3xl text-brandText leading-relaxed">
+                        <span class="lang-de">Lass uns besser kennenlernen! Alles, was du hier über mich gelesen hast, gibt dir ein erstes Gefühl wer ich bin und wie ich arbeite. Um zu wissen, ob ich die richtige Doula für euch bin braucht es aber mehr, daher melde dich gerne und wir machen ein persönliches kostenloses Kennenlernen aus.</span>
+                        <span class="lang-en">Let's get to know each other! Everything you have read here offers a first feeling for who I am and how I hold space. True resonance requires a real conversation — please reach out so we can schedule a warm, complimentary initial meeting.</span>
+                    </p>
+                </div>
+
+                <!-- AJAX Formular -->
+                <form id="contact-form" action="https://formspree.io/f/mzeeovwn" method="POST" class="max-w-xl mx-auto space-y-5 text-left pt-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="form-name" class="mono-text text-xs uppercase tracking-wider block text-brandBrown font-bold mb-1">
+                                <span class="lang-de">Name *</span>
+                                <span class="lang-en">Name *</span>
+                            </label>
+                            <input id="form-name" type="text" name="name" required placeholder="Dein Name" data-placeholder-de="Dein Name" data-placeholder-en="Your name" class="w-full bg-[#fdfbf9] border border-brandBorder/20 px-3 py-2 text-sm text-brandText focus:outline-none focus:border-brandTerracotta">
+                        </div>
+                        <div>
+                            <label for="form-email" class="mono-text text-xs uppercase tracking-wider block text-brandBrown font-bold mb-1">
+                                <span class="lang-de">E-Mail *</span>
+                                <span class="lang-en">Email *</span>
+                            </label>
+                            <input id="form-email" type="email" name="email" required placeholder="deine@email.de" data-placeholder-de="deine@email.de" data-placeholder-en="your@email.com" class="w-full bg-[#fdfbf9] border border-brandBorder/20 px-3 py-2 text-sm text-brandText focus:outline-none focus:border-brandTerracotta">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="form-phone" class="mono-text text-xs uppercase tracking-wider block text-brandBrown font-semibold mb-1">
+                                <span class="lang-de">Telefonnummer</span>
+                                <span class="lang-en">Phone Number</span>
+                            </label>
+                            <input id="form-phone" type="tel" name="phone" placeholder="+49 ..." class="w-full bg-[#fdfbf9] border border-brandBorder/20 px-3 py-2 text-sm text-brandText focus:outline-none focus:border-brandTerracotta">
+                        </div>
+                        <div>
+                            <label for="form-et" class="mono-text text-xs uppercase tracking-wider block text-brandBrown font-semibold mb-1">
+                                <span class="lang-de">Errechneter Termin (ET)</span>
+                                <span class="lang-en">Estimated Due Date</span>
+                            </label>
+                            <input id="form-et" type="date" name="et" class="w-full bg-[#fdfbf9] border border-brandBorder/20 px-3 py-2 text-sm text-brandText focus:outline-none focus:border-brandTerracotta">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="form-geburtsort" class="mono-text text-xs uppercase tracking-wider block text-brandBrown font-bold mb-1">
+                            <span class="lang-de">Geburtsort-Wunsch *</span>
+                            <span class="lang-en">Preferred Birth Setting *</span>
+                        </label>
+                        <input id="form-geburtsort" type="text" name="geburtsort" required placeholder="z. B. Klinik, Geburtshaus, Hausgeburt oder noch offen..." data-placeholder-de="z. B. Klinik, Geburtshaus, Hausgeburt oder noch offen..." data-placeholder-en="e.g., Hospital, birth center, home birth, or still exploring..." class="w-full bg-[#fdfbf9] border border-brandBorder/20 px-3 py-2 text-sm text-brandText focus:outline-none focus:border-brandTerracotta">
+                    </div>
+
+                    <div>
+                        <label for="form-message" class="mono-text text-xs uppercase tracking-wider block text-brandBrown font-semibold mb-1">
+                            <span class="lang-de">Weitere Details / Deine Nachricht</span>
+                            <span class="lang-en">Your Message / Further Details</span>
+                        </label>
+                        <textarea id="form-message" name="nachricht" rows="4" placeholder="Erzähl mir ein bisschen über dich, deine Wünsche oder offene Fragen..." data-placeholder-de="Erzähl mir ein bisschen über dich, deine Wünsche oder offene Fragen..." data-placeholder-en="Tell me a little about yourself, your desires, or any questions..." class="w-full bg-[#fdfbf9] border border-brandBorder/20 px-3 py-2 text-sm text-brandText focus:outline-none focus:border-brandTerracotta"></textarea>
+                    </div>
+
+                    <p class="text-[11px] text-brandTextMuted italic">
+                        <span class="lang-de">Felder mit einem * sind Pflichtfelder. Deine Angaben werden absolut vertraulich behandelt.</span>
+                        <span class="lang-en">Fields marked with * are required. Your details are treated with complete confidentiality.</span>
+                    </p>
+
+                    <!-- Statusnachricht Container -->
+                    <div id="form-status" class="hidden p-4 border text-center text-sm font-medium"></div>
+
+                    <div class="text-center pt-2">
+                        <button id="form-submit-btn" type="submit" class="btn-editorial w-full sm:w-auto px-8 py-4 text-sm font-bold">
+                            <span class="lang-de">NACHRICHT ABSENDEN</span>
+                            <span class="lang-en">SEND MESSAGE</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- UNTERSEITE: DATENSCHUTZ -->
+        <div id="tab-datenschutz" class="page-tab space-y-8 max-w-4xl mx-auto px-4 text-sm text-brandText font-light leading-relaxed" aria-hidden="true">
+            <div class="text-center border-b border-brandBorder/10 pb-6 pt-4">
+                <span class="mono-text text-xs text-brandTerracotta uppercase">RECHTLICHES</span>
+                <h2 class="serif-heading text-4xl md:text-5xl text-brandText font-normal">
+                    Datenschutzerklärung
+                </h2>
+                <p class="mono-text text-xs text-brandTextMuted mt-2">Stand: 2026</p>
+            </div>
+
+            <div class="bg-white/60 p-8 border border-brandBorder/10 shadow-sm space-y-6">
+                <div>
+                    <h3 class="serif-heading text-2xl text-brandBrown font-semibold mb-2">Verantwortlicher</h3>
+                    <p><strong>Lara Süss / Motherlover</strong><br>
+                    Obentrautstrasse 32<br>
+                    10963 Berlin<br>
+                    E-Mail-Adresse: <a href="mailto:infomotherlover@gmail.com" class="underline">infomotherlover@gmail.com</a><br>
+                    Website: <a href="https://www.motherloverberlin.de" target="_blank" rel="noopener" class="underline">www.motherloverberlin.de</a></p>
+                </div>
+
+                <hr class="border-brandBorder/10">
+
+                <div>
+                    <h3 class="serif-heading text-2xl text-brandBrown font-semibold mb-2">Kontaktformular & Formspree</h3>
+                    <p>Wenn Sie über unser Kontaktformular Anfragen an uns senden, werden Ihre Angaben inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns verarbeitet. Zur technischen Bereitstellung unseres Kontaktformulars nutzen wir den Dienst Formspree (Formspree Inc., USA). Hierbei werden Ihre Daten verschlüsselt übertragen und verarbeitet.</p>
+                </div>
+
+                <hr class="border-brandBorder/10">
+
+                <div>
+                    <h3 class="serif-heading text-2xl text-brandBrown font-semibold mb-2">Rechte der betroffenen Personen</h3>
+                    <p>Ihnen stehen als Betroffene nach Art. 15 bis 21 DSGVO folgende Rechte zu: Widerspruchsrecht, Widerrufsrecht bei Einwilligungen, Auskunftsrecht, Recht auf Berichtigung, Löschung & Einschränkung sowie Recht auf Datenübertragbarkeit.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- UNTERSEITE: IMPRESSUM -->
+        <div id="tab-impressum" class="page-tab space-y-8 max-w-3xl mx-auto px-4 text-sm text-brandText font-light leading-relaxed" aria-hidden="true">
+            <div class="text-center border-b border-brandBorder/10 pb-6 pt-4">
+                <span class="mono-text text-xs text-brandTerracotta uppercase">RECHTLICHES</span>
+                <h2 class="serif-heading text-4xl md:text-5xl text-brandText font-normal">
+                    Impressum
+                </h2>
+            </div>
+
+            <div class="bg-white/60 p-8 border border-brandBorder/10 shadow-sm space-y-6">
+                <div>
+                    <h3 class="serif-heading text-2xl text-brandBrown font-semibold mb-2">Angaben gemäß § 5 DDG</h3>
+                    <p><strong>Lara Süss</strong><br>
+                    Obentrautstrasse 32<br>
+                    10963 Berlin</p>
+                </div>
+
+                <div>
+                    <h3 class="serif-heading text-2xl text-brandBrown font-semibold mb-2">Kontakt</h3>
+                    <p>E-Mail: <a href="mailto:infomotherlover@gmail.com" class="underline">infomotherlover@gmail.com</a></p>
+                </div>
+
+                <hr class="border-brandBorder/10">
+
+                <div>
+                    <h3 class="serif-heading text-2xl text-brandBrown font-semibold mb-2">Haftung für Inhalte</h3>
+                    <p>Die Inhalte meiner Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-footerBg text-footerText py-16 px-6 md:px-12 w-full mt-16 border-t border-brandBorder/10 font-sans">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 items-center text-center md:text-left">
+            
+            <div class="space-y-3 md:text-left">
+                <p class="text-xs md:text-sm leading-relaxed font-normal">
+                    <span class="lang-de">Ganzheitliche und liebevolle Begleitung durch Schwangerschaft, Geburt und Wochenbett in Berlin.</span>
+                    <span class="lang-en">Holistic, heart-centered doula accompaniment for pregnancy, birth, and postpartum in Berlin.</span>
+                </p>
+                <p class="text-xs italic opacity-85 leading-relaxed">
+                    <span class="lang-de">Akkreditiert & zertifiziert. Mit Herz und Raum für deine individuelle Reise.</span>
+                    <span class="lang-en">Certified & dedicated. Holding loving space for your sovereign birth journey.</span>
+                </p>
+            </div>
+
+            <div class="flex justify-center items-center">
+                <a href="#home" class="inline-block transition-transform hover:scale-105 duration-300">
+                    <h3 class="brand-logo text-3xl md:text-4xl text-footerText">motherlover</h3>
+                </a>
+            </div>
+
+            <div class="space-y-4 md:text-right flex flex-col items-center md:items-end">
+                <div class="flex items-center gap-4">
+                    <a href="https://www.instagram.com/__motherlover__/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity" aria-label="Instagram">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="mailto:infomotherlover@gmail.com" class="text-xs md:text-sm underline underline-offset-4 hover:opacity-80 transition-opacity font-medium">
+                        infomotherlover@gmail.com
+                    </a>
+                </div>
+
+                <div class="text-xs space-x-2 pt-1 opacity-90">
+                    <a href="#datenschutz" class="underline underline-offset-2 hover:opacity-80 transition-opacity">Datenschutz</a>
+                    <span>|</span>
+                    <a href="#impressum" class="underline underline-offset-2 hover:opacity-80 transition-opacity">Impressum</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- INTERACTION & LANGUAGE ROUTING SCRIPT -->
+    <script>
+        const validTabs = [
+            'home', 'lara', 'doula-info', 
+            'angebot-schwangerschaft', 'angebot-geburt', 
+            'angebot-postpartum', 'angebot-gebaerpool', 
+            'testimonials', 'kontakt', 'datenschutz', 'impressum'
+        ];
+
+        function setLanguage(lang) {
+            if (lang !== 'de' && lang !== 'en') lang = 'de';
+            
+            document.documentElement.lang = lang;
+            localStorage.setItem('motherlover_lang', lang);
+
+            const btnDe = document.getElementById('lang-btn-de');
+            const btnEn = document.getElementById('lang-btn-en');
+            if (btnDe && btnEn) {
+                if (lang === 'de') {
+                    btnDe.className = 'font-bold text-brandText';
+                    btnEn.className = 'opacity-60 text-brandTextMuted';
+                } else {
+                    btnDe.className = 'opacity-60 text-brandTextMuted';
+                    btnEn.className = 'font-bold text-brandText';
+                }
+            }
+
+            const mobBtnDe = document.getElementById('mob-lang-btn-de');
+            const mobBtnEn = document.getElementById('mob-lang-btn-en');
+            if (mobBtnDe && mobBtnEn) {
+                if (lang === 'de') {
+                    mobBtnDe.className = 'font-bold text-brandText';
+                    mobBtnEn.className = 'opacity-60 text-brandTextMuted';
+                } else {
+                    mobBtnDe.className = 'opacity-60 text-brandTextMuted';
+                    mobBtnEn.className = 'font-bold text-brandText';
+                }
+            }
+
+            document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
+                el.placeholder = el.getAttribute('data-placeholder-' + lang);
+            });
+        }
+
+        function switchTab(tabId, updateHash = true) {
+            if (!validTabs.includes(tabId)) {
+                tabId = 'home';
+            }
+
+            const tabs = document.querySelectorAll('.page-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+                tab.setAttribute('aria-hidden', 'true');
+            });
+
+            const targetTab = document.getElementById('tab-' + tabId);
+            if (targetTab) {
+                targetTab.classList.add('active');
+                targetTab.setAttribute('aria-hidden', 'false');
+            }
+
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => btn.classList.remove('active-link'));
+
+            let activeNavId = 'nav-' + tabId;
+            if (tabId.startsWith('angebot')) {
+                activeNavId = 'nav-angebot';
+            }
+
+            const activeNavBtn = document.getElementById(activeNavId);
+            if (activeNavBtn) {
+                activeNavBtn.classList.add('active-link');
+            }
+
+            if (updateHash && window.location.hash !== '#' + tabId) {
+                window.location.hash = tabId;
+            }
+
+            // Dropdown schließen falls offen
+            const desktopDropdown = document.getElementById('desktop-dropdown');
+            if (desktopDropdown) {
+                desktopDropdown.classList.remove('is-open');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function initRouter() {
+            const savedLang = localStorage.getItem('motherlover_lang') || 'de';
+            setLanguage(savedLang);
+
+            const hash = window.location.hash.replace('#', '');
+            if (hash && validTabs.includes(hash)) {
+                switchTab(hash, false);
+            } else {
+                switchTab('home', false);
+            }
+        }
+
+        window.addEventListener('popstate', () => {
+            const hash = window.location.hash.replace('#', '') || 'home';
+            switchTab(hash, false);
+        });
+
+        window.addEventListener('click', (e) => {
+            const anchor = e.target.closest('a[href^="#"]');
+            if (anchor) {
+                const targetHash = anchor.getAttribute('href').replace('#', '');
+                if (validTabs.includes(targetHash)) {
+                    e.preventDefault();
+                    switchTab(targetHash, true);
+                    closeMobileMenu();
+                }
+            }
+        });
+
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+        function toggleMobileMenu() {
+            if (mobileMenu) {
+                const isHidden = mobileMenu.classList.toggle('hidden');
+                if (mobileMenuBtn) {
+                    mobileMenuBtn.setAttribute('aria-expanded', !isHidden);
+                }
+            }
+        }
+
+        function closeMobileMenu() {
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                if (mobileMenuBtn) {
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                }
+            }
+        }
+
+        document.addEventListener('click', (e) => {
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    closeMobileMenu();
+                }
+            }
+        });
+
+        // AJAX Formspree submission handler
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+        const formSubmitBtn = document.getElementById('form-submit-btn');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const isEn = document.documentElement.lang === 'en';
+                
+                formSubmitBtn.disabled = true;
+                const originalBtnText = formSubmitBtn.innerText;
+                formSubmitBtn.innerText = isEn ? 'SENDING...' : 'WIRD GESENDET...';
+
+                formStatus.className = 'p-4 border text-center text-sm font-medium bg-brandBg border-brandBorder/20 text-brandText block';
+                formStatus.innerText = isEn ? 'Your inquiry is being transmitted...' : 'Deine Nachricht wird übertragen...';
+
+                const formData = new FormData(contactForm);
+
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        formStatus.className = 'p-4 border text-center text-sm font-medium bg-[#e4ede1] border-[#749b6b] text-[#2e4726] block';
+                        formStatus.innerHTML = isEn 
+                            ? '✨ <strong>Thank you so much!</strong> Your message has been received. I will reach out to you shortly.'
+                            : '✨ <strong>Vielen lieben Dank!</strong> Deine Nachricht ist angekommen. Ich melde mich so schnell wie möglich bei dir.';
+                        contactForm.reset();
+                    } else {
+                        formStatus.className = 'p-4 border text-center text-sm font-medium bg-[#f9e5e5] border-[#b85d5d] text-[#5c1c1c] block';
+                        formStatus.innerText = isEn
+                            ? 'There was an issue sending your message. Please email me directly at infomotherlover@gmail.com.'
+                            : 'Es gab ein Problem beim Absenden. Bitte schreibe mir alternativ direkt an infomotherlover@gmail.com.';
+                    }
+                } catch (error) {
+                    formStatus.className = 'p-4 border text-center text-sm font-medium bg-[#f9e5e5] border-[#b85d5d] text-[#5c1c1c] block';
+                    formStatus.innerText = isEn
+                        ? 'Connection failed. Please check your internet or send a direct email.'
+                        : 'Verbindung fehlgeschlagen. Bitte prüfe deine Internetverbindung oder sende eine direkte E-Mail.';
+                } finally {
+                    formSubmitBtn.disabled = false;
+                    formSubmitBtn.innerText = originalBtnText;
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', initRouter);
+    </script>
+</body>
+</html>
