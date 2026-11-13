@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <base href="/"><!-- Google Consent Mode v2 & Google Tag Manager -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      // Default: alle Cookies und Tracking-Signale gesperrt (Consent Mode v2)
+      var savedConsent = localStorage.getItem('motherlover_cookie_consent');
+      if (savedConsent === 'granted') {
+        gtag('consent', 'default', {
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'analytics_storage': 'granted'
+        });
+      } else {
+        gtag('consent', 'default', {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied'
+        });
+      }
+      gtag('js', new Date());
+    </script>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-W37LCCG5"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geburtspool Verleih Berlin für Hausgeburt | Motherlover</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- SEO & Social Sharing Meta Tags -->
+    <meta name="description" content="Lara Süss — Ganzheitliche Geburts- und Postpartum-Doula in Berlin. Liebevolle, kontinuierliche Begleitung für Schwangerschaft, Haus- und Klinikgeburt sowie Wochenbett.">
+    <meta name="keywords" content="Doula Berlin, Geburtsbegleitung, Wochenbettbegleitung, Postpartum Doula, Hausgeburt Berlin, Geburtspool Verleih">
+    <meta property="og:title" content="motherlover — divine maternal service | Lara Süss Doula Berlin">
+    <meta property="og:description" content="Ganzheitliche und liebevolle Begleitung durch Schwangerschaft, Geburt und Wochenbett in Berlin.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.motherloverberlin.de">
+    <meta property="og:image" content="lara.jpg">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&amp;family=Courier+Prime:wght@400;700&amp;family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=Pacifico&amp;display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBg: '#f2eae1',          /* Sand-Beige Hintergrund */
+                        brandCardBg: '#e5d1c5',      /* Warmes Dusty Rose / Terracotta Light */
+                        brandCardBgDark: '#d8bba9',  
+                        brandTerracotta: '#9e6949',  /* Erdiges Terrakotta */
+                        brandBrown: '#6e4f3a',       /* Mokka Braun */
+                        brandOchre: '#c29b53',       /* Ocker für Buttons */
+                        brandText: '#2e2825',        /* Edles Dunkelbraun für Text */
+                        brandTextMuted: '#6e645a',
+                        brandBorder: '#3a342f',
+                        earthTan: '#c79d67',
+                        earthBlush: '#f0d5c3',
+                        earthLinen: '#e3ddcf',
+                        quoteBg: '#E8C8BE',
+                        quoteBorder: '#332D2B',
+                        quoteText: '#2B2625',
+                        footerBg: '#eea082',        /* Pfirsich-Farbe für den Footer */
+                        footerText: '#2A2825',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        mono: ['"Courier Prime"', 'monospace'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                        logo: ['"Pacifico"', 'cursive', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #f2eae1;
+            color: #2e2825;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .serif-heading {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .mono-text {
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .brand-logo {
+            font-family: 'Pacifico', cursive;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        /* Zweisprachige Umschaltung via html[lang] */
+        html[lang="de"] .lang-en { display: none !important; }
+        html[lang="en"] .lang-de { display: none !important; }
+
+        .photo-frame {
+            background-color: transparent;
+            padding: 0;
+            box-shadow: none;
+            border: none;
+            transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .photo-frame:hover {
+            transform: translateY(-3px);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            min-height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            background-color: #9e6949;
+            color: #f2eae1;
+            padding: 10px 0;
+            white-space: nowrap;
+        }
+
+        .ticker-move {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 55s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .ticker-move {
+                animation: none;
+                white-space: normal;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .page-tab {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .page-tab.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .nav-border-box {
+            border-top: 1px solid rgba(58, 52, 47, 0.25);
+            border-bottom: 1px solid rgba(58, 52, 47, 0.25);
+        }
+
+        .nav-btn {
+            position: relative;
+            padding-bottom: 3px;
+        }
+
+        .nav-btn.active-link {
+            border-bottom: 1.5px solid #2e2825;
+        }
+
+        /* Robuste Dropdown-Mechanik mit Brücke gegen Hover-Abreißen */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100%;
+            background-color: #f2eae1;
+            min-width: 250px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+            border: 1px solid rgba(58, 52, 47, 0.2);
+            z-index: 100;
+            padding: 6px 0;
+            margin-top: 0;
+        }
+
+        /* Unsichtbare Brücke, damit der Cursor beim Übergang im Hover bleibt */
+        .dropdown:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 12px;
+        }
+
+        .dropdown:hover .dropdown-menu,
+        .dropdown:focus-within .dropdown-menu,
+        .dropdown.is-open .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            width: 100%;
+            text-align: left;
+            padding: 12px 18px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: #2e2825;
+            transition: all 0.2s;
+            border-bottom: 1px solid rgba(58, 52, 47, 0.08);
+            display: block;
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #9e6949;
+            color: #ffffff;
+        }
+
+        .btn-editorial {
+            font-family: 'Courier Prime', monospace;
+            background-color: #c29b53;
+            color: #2e2825;
+            border: 1px solid #2e2825;
+            padding: 12px 28px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .btn-editorial:hover {
+            background-color: #9e6949;
+            color: #ffffff;
+        }
+
+        .btn-editorial:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        details summary {
+            list-style: none;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Motherlover Birth & Postpartum Doula",
+      "image": "https://motherloverberlin.de/lara.jpg",
+      "url": "https://motherloverberlin.de/",
+      "telephone": "+491784651823",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Obentrautstraße 32",
+        "addressLocality": "Berlin",
+        "postalCode": "10963",
+        "addressCountry": "DE"
+      },
+      "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "15"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was ist der Unterschied zwischen einer Hebamme und einer Doula?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eine Doula ersetzt keine Hebamme, da sie keine medizinischen Aufgaben übernimmt. Stattdessen ist sie eine zusätzliche, kontinuierliche Begleiterin vor, während und nach der Geburt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann das Honorar von der Krankenkasse übernommen werden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Einige gesetzliche und private Krankenkassen bezuschussen die Rufbereitschaft (oft mit rund 250 Euro)."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script><link rel="canonical" href="https://motherloverberlin.de/gebaerpool/"><link rel="alternate" hreflang="de" href="https://motherloverberlin.de/gebaerpool/"><link rel="alternate" hreflang="en" href="https://motherloverberlin.de/en/gebaerpool/"></head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-brandTerracotta selection:text-white">
+
+    <!-- TICKER BAR OBEN -->
+    <div class="ticker-wrap mono-text text-xs uppercase tracking-widest border-b border-brandBorder/20">
+        <div class="ticker-move">
+            <span class="px-3">SCHWANGERSCHAFT · GEBURT · WOCHENBETT · MAMA BLESSINGS · MOTHERING THE MOTHER RETREATS ✹ SCHWANGERSCHAFT · GEBURT · WOCHENBETT · MAMA BLESSINGS · MOTHERING THE MOTHER RETREATS ✹ SCHWANGERSCHAFT · GEBURT · WOCHENBETT · MAMA BLESSINGS · MOTHERING THE MOTHER RETREATS ✹ SCHWANGERSCHAFT · GEBURT · WOCHENBETT · MAMA BLESSINGS · MOTHERING THE MOTHER RETREATS ✹ </span>
+            <span class="px-3">SCHWANGERSCHAFT · GEBURT · WOCHENBETT · MAMA BLESSINGS · MOTHERING THE MOTHER RETREATS ✹ SCHWANGERSCHAFT · GEBURT · WOCHENBETT · MAMA BLESSINGS · MOTHERING THE MOTHER RETREATS ✹ SCHWANGERSCHAFT · GEBURT · WOCHENBETT · MAMA BLESSINGS · MOTHERING THE MOTHER RETREATS ✹ SCHWANGERSCHAFT · GEBURT · WOCHENBETT · MAMA BLESSINGS · MOTHERING THE MOTHER RETREATS ✹ </span>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="pt-8 pb-0 text-center px-4 relative z-30">
+        <a href="/" class="inline-block group mb-6">
+            <h1 class="brand-logo text-4xl md:text-5xl lg:text-6xl text-brandText tracking-normal mb-1 transition-transform group-hover:scale-105 duration-300">
+                motherlover
+            </h1>
+            <p class="mono-text text-brandTerracotta text-xs md:text-sm tracking-widest uppercase mt-1 font-semibold">
+                divine maternal service
+            </p>
+        </a>
+
+        <!-- NAVIGATION (DESKTOP) -->
+        <nav id="nav-menu" class="nav-border-box py-3 max-w-5xl mx-auto hidden md:block">
+            <ul class="flex justify-center items-center gap-6 lg:gap-11 mono-text text-xs md:text-sm tracking-widest uppercase text-brandText font-semibold">
+                <li><a href="/" id="nav-home" class="nav-btn  hover:text-brandTerracotta transition-all py-1">HOME</a></li>
+                <li><a href="/lara/" id="nav-lara" class="nav-btn hover:text-brandTerracotta transition-all py-1">LARA</a></li>
+                <li><a href="/doula-info/" id="nav-doula-info" class="nav-btn hover:text-brandTerracotta transition-all py-1">DOULA</a></li>
+                
+                <li class="dropdown" id="desktop-dropdown">
+                    <a href="/schwangerschaft/" id="nav-angebot" class="nav-btn hover:text-brandTerracotta transition-all py-1 inline-flex items-center gap-1 active-link">
+                        ANGEBOT
+                        <svg class="w-3 h-3 fill-current inline" viewbox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"></path></svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/schwangerschaft/">
+                            SCHWANGERSCHAFT
+                            </a>
+                        <a href="/geburt/">
+                            GEBURT
+                            </a>
+                        <a href="/postpartum/">
+                            POSTPARTUM / WOCHENBETT
+                            </a>
+                        <a href="/gebaerpool/">
+                            GEBURTSPOOL VERLEIH
+                            </a>
+                    </div>
+                </li>
+
+                <li><a href="/testimonials/" id="nav-testimonials" class="nav-btn hover:text-brandTerracotta transition-all py-1">TESTIMONIALS</a></li>
+                <li>
+                    <a href="/kontakt/" id="nav-kontakt" class="nav-btn hover:text-brandTerracotta transition-all py-1">
+                        KONTAKT
+                        </a>
+                </li>
+
+                <!-- SPRACHUMSCHALTER (DESKTOP) -->
+                <li class="pl-2 border-l border-brandBorder/20 flex items-center gap-1.5 text-xs font-mono">
+                    <a href="/gebaerpool/" class="font-bold text-brandText">DE</a><span class="opacity-40">/</span>
+                    <a href="/en/gebaerpool/" class="hover:text-brandTerracotta transition-colors opacity-60">EN</a></li>
+            </ul>
+        </nav>
+
+        <!-- MOBILES MENÜ BAR -->
+        <div class="md:hidden nav-border-box py-3 flex justify-between items-center px-4">
+            <div class="flex items-center gap-2">
+                <span class="mono-text text-xs font-bold uppercase tracking-widest text-brandTerracotta">MENÜ</span>
+                <!-- SPRACHUMSCHALTER (MOBILE BAR) -->
+                <div class="mono-text text-xs tracking-wider flex items-center gap-1 border-l border-brandBorder/30 pl-3">
+                    <a href="/gebaerpool/" class="font-bold text-brandText">DE</a><span class="opacity-40">/</span>
+                    <a href="/en/gebaerpool/" class="hover:text-brandTerracotta transition-colors opacity-60">EN</a></div>
+            </div>
+            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-2 text-brandText focus:outline-none" aria-label="Menü öffnen" aria-expanded="false">
+                <svg id="burger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- MOBIL DROPDOWN MENÜ -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brandBg border-b border-brandBorder/20 px-6 py-6 space-y-4 text-left mono-text text-xs tracking-widest uppercase">
+            <a href="/" onclick="closeMobileMenu()" class="block w-full text-left py-2 border-b border-brandBorder/10 font-bold">HOME</a>
+            <a href="/lara/" onclick="closeMobileMenu()" class="block w-full text-left py-2 border-b border-brandBorder/10 font-bold">LARA</a>
+            <a href="/doula-info/" onclick="closeMobileMenu()" class="block w-full text-left py-2 border-b border-brandBorder/10 font-bold">DOULA</a>
+            
+            <div class="py-2 border-b border-brandBorder/10">
+                <span class="block font-bold text-brandTerracotta mb-2">
+                    ANGEBOT:
+                    </span>
+                <div class="pl-4 space-y-2 text-brandText font-medium">
+                    <a href="/schwangerschaft/" onclick="closeMobileMenu()" class="block py-1">
+                        ✹ SCHWANGERSCHAFT
+                        </a>
+                    <a href="/geburt/" onclick="closeMobileMenu()" class="block py-1">
+                        ✹ GEBURT
+                        </a>
+                    <a href="/postpartum/" onclick="closeMobileMenu()" class="block py-1">
+                        ✹ POSTPARTUM / WOCHENBETT
+                        </a>
+                    <a href="/gebaerpool/" onclick="closeMobileMenu()" class="block py-1">
+                        ✹ GEBURTSPOOL VERLEIH
+                        </a>
+                </div>
+            </div>
+
+            <a href="/testimonials/" onclick="closeMobileMenu()" class="block w-full text-left py-2 border-b border-brandBorder/10 font-bold">TESTIMONIALS</a>
+            <a href="/kontakt/" onclick="closeMobileMenu()" class="block w-full text-left py-2 font-bold">
+                KONTAKT
+                </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow w-full py-6">
+
+        <!-- HOME PAGE TAB -->
+        <!-- DOULA SUBPAGE -->
+        <!-- LARA SUBPAGE -->
+        <!-- UNTERSEITE: SCHWANGERSCHAFT -->
+        <!-- UNTERSEITE: GEBURT (50/50 VOLLFLÄCHIG) -->
+        <!-- UNTERSEITE: POSTPARTUM -->
+        <!-- UNTERSEITE: GEBURTSPOOL -->
+        <div id="tab-angebot-gebaerpool" class="space-y-12 max-w-5xl mx-auto px-4" aria-hidden="true" style="display: block; opacity: 1;">
+            <div class="text-center border-b border-brandBorder/10 pb-6 pt-4">
+                <h2 class="serif-heading text-4xl md:text-6xl text-brandText font-normal">
+                    Geburtspool Verleih
+                    </h2>
+            </div>
+
+            <section class="bg-brandCardBg p-8 md:p-12 border border-brandBorder/20 shadow-sm space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-6">
+                        <div class="photo-frame max-w-md mx-auto">
+                            <img src="gebaerpool.jpg" alt="Geburtspool Verleih" class="w-full h-[380px] object-cover" loading="lazy" width="600" height="380">
+                        </div>
+                    </div>
+                    <div class="md:col-span-6 space-y-6">
+                        <h3 class="serif-heading text-3xl md:text-4xl text-brandText font-normal">
+                            Sanfte Wassergeburt <em class="italic">zuhause</em>
+                            </h3>
+                        <p class="text-sm md:text-base text-brandText leading-relaxed font-light">
+                            Wasser bietet während der Geburt optimale Schwerelosigkeit, Entlastung und natürlichen Schmerzschutz. Mein Leih-Set enthält alles, was du für deine Hausgeburt benötigst.
+                            </p>
+                        
+                        <ul class="space-y-2 text-xs md:text-sm text-brandText font-light border-t border-brandBorder/10 pt-4">
+                            ✹ <strong>Komplettes Equipment:</strong> Pool, elektrische Luftpumpe, Wasserpumpe &amp; Schlauch
+                            ✹ <strong>Hygiene:</strong> Inklusive neuem, originalverpacktem Einweg-Inliner
+                            ✹ <strong>Leihdauer:</strong> Flexibel von 37+0 bis nach der Geburt
+                            </ul>
+
+                        <div class="border-t border-brandBorder/10 pt-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+                            <span class="serif-heading text-2xl font-bold text-brandText">
+                                160 € / Leihe
+                                </span>
+                            <a href="/kontakt/" class="btn-editorial">
+                                RESERVIERUNG ANFRAGEN
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- UNTERSEITE: TESTIMONIALS -->
+        <!-- KONTAKT SUBPAGE -->
+        <!-- UNTERSEITE: DATENSCHUTZ -->
+        <!-- UNTERSEITE: IMPRESSUM -->
+        </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-footerBg text-footerText py-16 px-6 md:px-12 w-full mt-16 border-t border-brandBorder/10 font-sans">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 items-center text-center md:text-left">
+            
+            <div class="space-y-3 md:text-left">
+                <p class="text-xs md:text-sm leading-relaxed font-normal">
+                    Ganzheitliche und liebevolle Begleitung durch Schwangerschaft, Geburt und Wochenbett in Berlin.
+                    </p>
+                <p class="text-xs italic opacity-85 leading-relaxed">
+                    Akkreditiert &amp; zertifiziert. Mit Herz und Raum für deine individuelle Reise.
+                    </p>
+            </div>
+
+            <div class="flex justify-center items-center">
+                <a href="/" class="inline-block transition-transform hover:scale-105 duration-300">
+                    <h3 class="brand-logo text-3xl md:text-4xl text-footerText">motherlover</h3>
+                </a>
+            </div>
+
+            <div class="space-y-4 md:text-right flex flex-col items-center md:items-end">
+                <div class="flex items-center gap-4">
+                    <a href="https://www.instagram.com/__motherlover__/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity" aria-label="Instagram">
+                        <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="mailto:infomotherlover@gmail.com" class="text-xs md:text-sm underline underline-offset-4 hover:opacity-80 transition-opacity font-medium">
+                        infomotherlover@gmail.com
+                    </a>
+                </div>
+
+                <div class="text-xs space-x-2 pt-1 opacity-90 flex flex-wrap items-center justify-center md:justify-end gap-y-1">
+                    <a href="/datenschutz/" class="underline underline-offset-2 hover:opacity-80 transition-opacity">
+                        Datenschutz
+                        </a>
+                    <span>|</span>
+                    <a href="/impressum/" class="underline underline-offset-2 hover:opacity-80 transition-opacity">
+                        Impressum
+                        </a>
+                    <span>|</span>
+                    <button type="button" onclick="openCookieBanner()" class="underline underline-offset-2 hover:opacity-80 transition-opacity">
+                        Cookie-Einstellungen
+                        </button>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- COOKIE CONSENT BANNER (Zweisprachig & Stilvoll) -->
+    <div id="cookie-banner" class="hidden fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:max-w-md z-50 bg-[#ebdcd1] border border-brandBorder/20 shadow-2xl p-6 transition-all duration-300 space-y-4">
+        <div class="space-y-2 text-left">
+            <span class="mono-text text-[11px] text-brandTerracotta uppercase tracking-widest font-semibold block">
+                PRIVATSPHÄRE &amp; COOKIES
+                </span>
+            <h4 class="serif-heading text-xl md:text-2xl text-brandText font-normal">
+                Deine Privatsphäre ist mir <em class="italic">wichtig</em>
+                </h4>
+            <p class="text-xs text-brandText font-light leading-relaxed">
+                Ich nutze Cookies und Tracking-Technologien (Google Tag Manager &amp; Google Analytics), um die Nutzung meiner Website besser zu verstehen und kontinuierlich zu verbessern. Analysedaten werden erst nach deiner ausdrücklichen Einwilligung erfasst.
+                </p>
+            <div class="pt-1">
+                <a href="/datenschutz/" onclick="hideCookieBanner()" class="text-[11px] underline text-brandBrown hover:text-brandTerracotta transition-colors">
+                    Mehr in der Datenschutzerklärung erfahren
+                    </a>
+            </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-2 pt-1">
+            <button type="button" onclick="acceptAllCookies()" class="btn-editorial py-2.5 px-4 text-center text-xs font-bold w-full sm:w-auto flex-1">
+                ALLE AKZEPTIEREN
+                </button>
+            <button type="button" onclick="acceptEssentialCookies()" class="mono-text text-xs uppercase tracking-wider py-2.5 px-4 text-center border border-brandBorder/30 text-brandText hover:bg-brandBg/60 transition-colors w-full sm:w-auto">
+                NUR ESSENZIELLE
+                </button>
+        </div>
+    </div>
+
+    <!-- INTERACTION & LANGUAGE ROUTING SCRIPT -->
+    <script>
+        const validTabs = [
+            'home', 'lara', 'doula-info', 
+            'angebot-schwangerschaft', 'angebot-geburt', 
+            'angebot-postpartum', 'angebot-gebaerpool', 
+            'testimonials', 'kontakt', 'datenschutz', 'impressum'
+        ];
+
+        function setLanguage(lang) {
+            if (lang !== 'de' && lang !== 'en') lang = 'de';
+            
+            document.documentElement.lang = lang;
+            localStorage.setItem('motherlover_lang', lang);
+
+            const btnDe = document.getElementById('lang-btn-de');
+            const btnEn = document.getElementById('lang-btn-en');
+            if (btnDe && btnEn) {
+                if (lang === 'de') {
+                    btnDe.className = 'font-bold text-brandText';
+                    btnEn.className = 'opacity-60 text-brandTextMuted';
+                } else {
+                    btnDe.className = 'opacity-60 text-brandTextMuted';
+                    btnEn.className = 'font-bold text-brandText';
+                }
+            }
+
+            const mobBtnDe = document.getElementById('mob-lang-btn-de');
+            const mobBtnEn = document.getElementById('mob-lang-btn-en');
+            if (mobBtnDe && mobBtnEn) {
+                if (lang === 'de') {
+                    mobBtnDe.className = 'font-bold text-brandText';
+                    mobBtnEn.className = 'opacity-60 text-brandTextMuted';
+                } else {
+                    mobBtnDe.className = 'opacity-60 text-brandTextMuted';
+                    mobBtnEn.className = 'font-bold text-brandText';
+                }
+            }
+
+            document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
+                el.placeholder = el.getAttribute('data-placeholder-' + lang);
+            });
+        }
+
+        function switchTab(tabId, updateHash = true) {
+            if (!validTabs.includes(tabId)) {
+                tabId = 'home';
+            }
+
+            const tabs = document.querySelectorAll('.page-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+                tab.setAttribute('aria-hidden', 'true');
+            });
+
+            const targetTab = document.getElementById('tab-' + tabId);
+            if (targetTab) {
+                targetTab.classList.add('active');
+                targetTab.setAttribute('aria-hidden', 'false');
+            }
+
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => btn.classList.remove('active-link'));
+
+            let activeNavId = 'nav-' + tabId;
+            if (tabId.startsWith('angebot')) {
+                activeNavId = 'nav-angebot';
+            }
+
+            const activeNavBtn = document.getElementById(activeNavId);
+            if (activeNavBtn) {
+                activeNavBtn.classList.add('active-link');
+            }
+
+            if (updateHash && window.location.hash !== '#' + tabId) {
+                
+            }
+
+            // Dropdown schließen falls offen
+            const desktopDropdown = document.getElementById('desktop-dropdown');
+            if (desktopDropdown) {
+                desktopDropdown.classList.remove('is-open');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function initRouter() {
+            const savedLang = localStorage.getItem('motherlover_lang') || 'de';
+            setLanguage(savedLang);
+
+            const hash = window.location.hash.replace('#', '');
+            if (hash && validTabs.includes(hash)) {
+                switchTab(hash, false);
+            } else {
+                switchTab('home', false);
+            }
+            
+            initCookieConsent();
+        }
+
+        window.addEventListener('popstate', () => {
+            const hash = window.location.hash.replace('#', '') || 'home';
+            switchTab(hash, false);
+        });
+
+        window.addEventListener('click', (e) => {
+            const anchor = e.target.closest('a[href^="#"]');
+            if (anchor) {
+                const targetHash = anchor.getAttribute('href').replace('#', '');
+                if (validTabs.includes(targetHash)) {
+                    e.preventDefault();
+                    window.location.href = anchor.getAttribute("href");
+                    closeMobileMenu();
+                }
+            }
+        });
+
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+        function toggleMobileMenu() {
+            if (mobileMenu) {
+                const isHidden = mobileMenu.classList.toggle('hidden');
+                if (mobileMenuBtn) {
+                    mobileMenuBtn.setAttribute('aria-expanded', !isHidden);
+                }
+            }
+        }
+
+        function closeMobileMenu() {
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                if (mobileMenuBtn) {
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                }
+            }
+        }
+
+        document.addEventListener('click', (e) => {
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    closeMobileMenu();
+                }
+            }
+        });
+
+
+        // Cookie Consent Funktionen
+        function updateConsent(status) {
+            if (status === 'granted') {
+                gtag('consent', 'update', {
+                    'ad_storage': 'granted',
+                    'ad_user_data': 'granted',
+                    'ad_personalization': 'granted',
+                    'analytics_storage': 'granted'
+                });
+                localStorage.setItem('motherlover_cookie_consent', 'granted');
+            } else {
+                gtag('consent', 'update', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
+                localStorage.setItem('motherlover_cookie_consent', 'denied');
+            }
+            hideCookieBanner();
+        }
+
+        function acceptAllCookies() {
+            updateConsent('granted');
+        }
+
+        function acceptEssentialCookies() {
+            updateConsent('denied');
+        }
+
+        function hideCookieBanner() {
+            const banner = document.getElementById('cookie-banner');
+            if (banner) banner.classList.add('hidden');
+        }
+
+        function openCookieBanner() {
+            const banner = document.getElementById('cookie-banner');
+            if (banner) banner.classList.remove('hidden');
+        }
+
+        function initCookieConsent() {
+            const saved = localStorage.getItem('motherlover_cookie_consent');
+            if (!saved) {
+                openCookieBanner();
+            }
+        }
+
+        // AJAX Formspree submission handler
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+        const formSubmitBtn = document.getElementById('form-submit-btn');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const isEn = document.documentElement.lang === 'en';
+                
+                formSubmitBtn.disabled = true;
+                const originalBtnText = formSubmitBtn.innerText;
+                formSubmitBtn.innerText = isEn ? 'SENDING...' : 'WIRD GESENDET...';
+
+                formStatus.className = 'p-4 border text-center text-sm font-medium bg-brandBg border-brandBorder/20 text-brandText block';
+                formStatus.innerText = isEn ? 'Your inquiry is being transmitted...' : 'Deine Nachricht wird übertragen...';
+
+                const formData = new FormData(contactForm);
+
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        formStatus.className = 'p-4 border text-center text-sm font-medium bg-[#e4ede1] border-[#749b6b] text-[#2e4726] block';
+                        formStatus.innerHTML = isEn 
+                            ? '✨ <strong>Thank you so much!</strong> Your message has been received. I will reach out to you shortly.'
+                            : '✨ <strong>Vielen lieben Dank!</strong> Deine Nachricht ist angekommen. Ich melde mich so schnell wie möglich bei dir.';
+                        contactForm.reset();
+                    } else {
+                        formStatus.className = 'p-4 border text-center text-sm font-medium bg-[#f9e5e5] border-[#b85d5d] text-[#5c1c1c] block';
+                        formStatus.innerText = isEn
+                            ? 'There was an issue sending your message. Please email me directly at infomotherlover@gmail.com.'
+                            : 'Es gab ein Problem beim Absenden. Bitte schreibe mir alternativ direkt an infomotherlover@gmail.com.';
+                    }
+                } catch (error) {
+                    formStatus.className = 'p-4 border text-center text-sm font-medium bg-[#f9e5e5] border-[#b85d5d] text-[#5c1c1c] block';
+                    formStatus.innerText = isEn
+                        ? 'Connection failed. Please check your internet or send a direct email.'
+                        : 'Verbindung fehlgeschlagen. Bitte prüfe deine Internetverbindung oder sende eine direkte E-Mail.';
+                } finally {
+                    formSubmitBtn.disabled = false;
+                    formSubmitBtn.innerText = originalBtnText;
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', initRouter);
+    </script>
+</body>
+</html>
