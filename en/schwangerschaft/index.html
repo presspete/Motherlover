@@ -6,21 +6,31 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       
-      // Default: alle Cookies und Tracking-Signale gesperrt (Consent Mode v2)
+      // Google Consent Mode v2 (Advanced Mode):
+      // Auch bei 'denied' werden rein anonyme, cookielose Pings für das GA4 Behavioral Modeling gesendet.
+      gtag('set', 'url_passthrough', true);
+      gtag('set', 'ads_data_redaction', true);
+
       var savedConsent = localStorage.getItem('motherlover_cookie_consent');
       if (savedConsent === 'granted') {
         gtag('consent', 'default', {
           'ad_storage': 'granted',
           'ad_user_data': 'granted',
           'ad_personalization': 'granted',
-          'analytics_storage': 'granted'
+          'analytics_storage': 'granted',
+          'functionality_storage': 'granted',
+          'security_storage': 'granted',
+          'wait_for_update': 500
         });
       } else {
         gtag('consent', 'default', {
           'ad_storage': 'denied',
           'ad_user_data': 'denied',
           'ad_personalization': 'denied',
-          'analytics_storage': 'denied'
+          'analytics_storage': 'denied',
+          'functionality_storage': 'granted',
+          'security_storage': 'granted',
+          'wait_for_update': 500
         });
       }
       gtag('js', new Date());
@@ -277,7 +287,72 @@
             display: none;
         }
     </style>
-<link rel="canonical" href="https://motherloverberlin.de/en/schwangerschaft/"><link rel="alternate" hreflang="de" href="https://motherloverberlin.de/schwangerschaft/"><link rel="alternate" hreflang="en" href="https://motherloverberlin.de/en/schwangerschaft/"></head>
+<link rel="canonical" href="https://motherloverberlin.de/en/schwangerschaft/"><link rel="alternate" hreflang="de" href="https://motherloverberlin.de/schwangerschaft/"><link rel="alternate" hreflang="en" href="https://motherloverberlin.de/en/schwangerschaft/"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+      "@id": "https://motherloverberlin.de/en/#business",
+      "name": "Motherlover — Birth & Postpartum Doula Berlin | Lara Süß",
+      "alternateName": "Motherlover Divine Maternal Service",
+      "description": "Lara Süß is an English and German speaking certified Birth and Postpartum Doula in Berlin-Kreuzberg. Holistic 1:1 care for pregnancy, home & hospital birth, Mama Blessings, Closing the Bones rituals, postpartum massages, and birth pool rentals.",
+      "image": "https://motherloverberlin.de/lara.jpg",
+      "url": "https://motherloverberlin.de/en/",
+      "telephone": "+491784651823",
+      "email": "infomotherlover@gmail.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Lara Süß",
+        "jobTitle": "Birth and Postpartum Doula",
+        "knowsLanguage": ["en", "de"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Obentrautstraße 32",
+        "addressLocality": "Berlin",
+        "addressRegion": "Berlin",
+        "postalCode": "10963",
+        "addressCountry": "DE"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Berlin"
+      },
+      "priceRange": "€€",
+      "sameAs": [
+        "https://www.instagram.com/__motherlover__/"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "15"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between a midwife and a doula?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A doula never replaces a midwife, as she performs no clinical or medical tasks. Instead, she is an additional, continuous emotional and physical companion before, during, and after birth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can doula fees be reimbursed by German health insurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Several statutory and private German health insurance providers offer partial reimbursement for doula on-call fees (often around €250)."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script></head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-brandTerracotta selection:text-white">
 
     <!-- TICKER BAR OBEN -->
@@ -614,9 +689,7 @@
             <h4 class="serif-heading text-xl md:text-2xl text-brandText font-normal">
                 Your privacy is <em class="italic">sacred</em>
             </h4>
-            <p class="text-xs text-brandText font-light leading-relaxed">
-                I use cookies and tracking technologies (Google Tag Manager &amp; Google Analytics) to understand website usage and continuously improve your experience. Analytics data is only collected with your explicit consent.
-            </p>
+            <p class="text-xs text-brandText font-light leading-relaxed">I use cookies and Google Analytics (Consent Mode v2) to understand how visitors use my site. If you select 'Anonymous Only', no cookies are stored on your device — only strictly anonymous, cookieless signals are used for basic statistics.</p>
             <div class="pt-1">
                 <a href="/en/datenschutz/" onclick="hideCookieBanner()" class="text-[11px] underline text-brandBrown hover:text-brandTerracotta transition-colors">
                     Read our Privacy Policy
@@ -625,12 +698,8 @@
         </div>
 
         <div class="flex flex-col sm:flex-row gap-2 pt-1">
-            <button type="button" onclick="acceptAllCookies()" class="btn-editorial py-2.5 px-4 text-center text-xs font-bold w-full sm:w-auto flex-1">
-                ACCEPT ALL
-            </button>
-            <button type="button" onclick="acceptEssentialCookies()" class="mono-text text-xs uppercase tracking-wider py-2.5 px-4 text-center border border-brandBorder/30 text-brandText hover:bg-brandBg/60 transition-colors w-full sm:w-auto">
-                ESSENTIAL ONLY
-            </button>
+            <button type="button" onclick="acceptAllCookies()" class="btn-editorial py-2.5 px-4 text-center text-xs font-bold w-full sm:w-auto flex-1">ACCEPT ALL</button>
+            <button type="button" onclick="acceptEssentialCookies()" class="mono-text text-xs uppercase tracking-wider py-2.5 px-4 text-center border border-brandBorder/30 text-brandText hover:bg-brandBg/60 transition-colors w-full sm:w-auto">ANONYMOUS ONLY</button>
         </div>
     </div>
 

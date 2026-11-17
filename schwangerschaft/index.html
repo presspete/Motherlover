@@ -6,21 +6,31 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       
-      // Default: alle Cookies und Tracking-Signale gesperrt (Consent Mode v2)
+      // Google Consent Mode v2 (Advanced Mode):
+      // Auch bei 'denied' werden rein anonyme, cookielose Pings für das GA4 Behavioral Modeling gesendet.
+      gtag('set', 'url_passthrough', true);
+      gtag('set', 'ads_data_redaction', true);
+
       var savedConsent = localStorage.getItem('motherlover_cookie_consent');
       if (savedConsent === 'granted') {
         gtag('consent', 'default', {
           'ad_storage': 'granted',
           'ad_user_data': 'granted',
           'ad_personalization': 'granted',
-          'analytics_storage': 'granted'
+          'analytics_storage': 'granted',
+          'functionality_storage': 'granted',
+          'security_storage': 'granted',
+          'wait_for_update': 500
         });
       } else {
         gtag('consent', 'default', {
           'ad_storage': 'denied',
           'ad_user_data': 'denied',
           'ad_personalization': 'denied',
-          'analytics_storage': 'denied'
+          'analytics_storage': 'denied',
+          'functionality_storage': 'granted',
+          'security_storage': 'granted',
+          'wait_for_update': 500
         });
       }
       gtag('js', new Date());
@@ -277,28 +287,92 @@
             display: none;
         }
     </style>
-<script type="application/ld+json">
+<link rel="canonical" href="https://motherloverberlin.de/schwangerschaft/"><link rel="alternate" hreflang="de" href="https://motherloverberlin.de/schwangerschaft/"><link rel="alternate" hreflang="en" href="https://motherloverberlin.de/en/schwangerschaft/"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
-      "name": "Motherlover Birth & Postpartum Doula",
+      "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+      "@id": "https://motherloverberlin.de/#business",
+      "name": "Motherlover — Geburts- & Postpartum-Doula Berlin | Lara Süß",
+      "alternateName": "Motherlover Divine Maternal Service",
+      "description": "Lara Süß ist zertifizierte deutsch- und englischsprachige Geburts- und Wochenbett-Doula in Berlin-Kreuzberg. Ganzheitliche Begleitung für Schwangerschaft, Hausgeburt, Klinikgeburt, Mama Blessing, Wochenbettmassage, Closing the Bones Ritual und Geburtspool-Verleih.",
       "image": "https://motherloverberlin.de/lara.jpg",
       "url": "https://motherloverberlin.de/",
       "telephone": "+491784651823",
+      "email": "infomotherlover@gmail.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Lara Süß",
+        "jobTitle": "Geburts- und Postpartum-Doula",
+        "knowsLanguage": ["de", "en"]
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Obentrautstraße 32",
         "addressLocality": "Berlin",
+        "addressRegion": "Berlin",
         "postalCode": "10963",
         "addressCountry": "DE"
       },
+      "areaServed": {
+        "@type": "City",
+        "name": "Berlin"
+      },
       "priceRange": "€€",
+      "sameAs": [
+        "https://www.instagram.com/__motherlover__/"
+      ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
         "reviewCount": "15"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Doula Leistungen Berlin",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Geburtsbegleitung Berlin (Hausgeburt & Klinik)",
+              "description": "Kontinuierliche 1:1 Geburtsbegleitung inkl. 24/7 Rufbereitschaft in ganz Berlin."
+            },
+            "price": "2100",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Postpartum / Wochenbettbetreuung Berlin",
+              "description": "Ganzheitliche Wochenbettbegleitung, nährende Wochenbettküche, Kräuterbad und Wochenbettmassage."
+            },
+            "price": "60",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Schwangerschaftsbegleitung & Mama Blessing",
+              "description": "Individuelle Schwangerschafts-Sitzungen, Schwangerenmassage und zeremonielle Mama Blessings."
+            },
+            "price": "200",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Geburtspool Verleih Berlin",
+              "description": "Komplettes professionelles Geburtspool-Set für Wassergeburten zu Hause."
+            },
+            "price": "160",
+            "priceCurrency": "EUR"
+          }
+        ]
       }
     },
     {
@@ -314,17 +388,25 @@
         },
         {
           "@type": "Question",
-          "name": "Kann das Honorar von der Krankenkasse übernommen werden?",
+          "name": "Kann das Honorar einer Doula von der Krankenkasse übernommen werden?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Einige gesetzliche und private Krankenkassen bezuschussen die Rufbereitschaft (oft mit rund 250 Euro)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was kostet eine Doula in Berlin bei Motherlover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eine Schwangerschaftssitzung (ca. 2 Stunden) kostet 200 Euro, die umfassende Geburtsbegleitung inkl. 24/7 Rufbereitschaft 2.100 Euro, Wochenbettbetreuung 60 Euro/Stunde und der Geburtspool-Verleih 160 Euro."
           }
         }
       ]
     }
   ]
 }
-</script><link rel="canonical" href="https://motherloverberlin.de/schwangerschaft/"><link rel="alternate" hreflang="de" href="https://motherloverberlin.de/schwangerschaft/"><link rel="alternate" hreflang="en" href="https://motherloverberlin.de/en/schwangerschaft/"></head>
+</script></head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-brandTerracotta selection:text-white">
 
     <!-- TICKER BAR OBEN -->
@@ -661,9 +743,7 @@
             <h4 class="serif-heading text-xl md:text-2xl text-brandText font-normal">
                 Deine Privatsphäre ist mir <em class="italic">wichtig</em>
                 </h4>
-            <p class="text-xs text-brandText font-light leading-relaxed">
-                Ich nutze Cookies und Tracking-Technologien (Google Tag Manager &amp; Google Analytics), um die Nutzung meiner Website besser zu verstehen und kontinuierlich zu verbessern. Analysedaten werden erst nach deiner ausdrücklichen Einwilligung erfasst.
-                </p>
+            <p class="text-xs text-brandText font-light leading-relaxed">Ich nutze Cookies und Google Analytics (Consent Mode v2), um zu verstehen, wie meine Website genutzt wird. Wenn du „Nur anonym“ wählst, werden keinerlei Cookies auf deinem Gerät gespeichert – es werden nur rein anonyme, cookielose Signale für die Statistik erfasst.</p>
             <div class="pt-1">
                 <a href="/datenschutz/" onclick="hideCookieBanner()" class="text-[11px] underline text-brandBrown hover:text-brandTerracotta transition-colors">
                     Mehr in der Datenschutzerklärung erfahren
@@ -672,12 +752,8 @@
         </div>
 
         <div class="flex flex-col sm:flex-row gap-2 pt-1">
-            <button type="button" onclick="acceptAllCookies()" class="btn-editorial py-2.5 px-4 text-center text-xs font-bold w-full sm:w-auto flex-1">
-                ALLE AKZEPTIEREN
-                </button>
-            <button type="button" onclick="acceptEssentialCookies()" class="mono-text text-xs uppercase tracking-wider py-2.5 px-4 text-center border border-brandBorder/30 text-brandText hover:bg-brandBg/60 transition-colors w-full sm:w-auto">
-                NUR ESSENZIELLE
-                </button>
+            <button type="button" onclick="acceptAllCookies()" class="btn-editorial py-2.5 px-4 text-center text-xs font-bold w-full sm:w-auto flex-1">ALLE AKZEPTIEREN</button>
+            <button type="button" onclick="acceptEssentialCookies()" class="mono-text text-xs uppercase tracking-wider py-2.5 px-4 text-center border border-brandBorder/30 text-brandText hover:bg-brandBg/60 transition-colors w-full sm:w-auto">NUR ANONYM</button>
         </div>
     </div>
 

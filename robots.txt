@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Explicitly welcome Bing & AI Search Crawlers (ChatGPT Search, Copilot, Perplexity, Claude, Google AI)
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://motherloverberlin.de/sitemap.xml
